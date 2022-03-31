@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using FsCheck;
 using FsCheck.Xunit;
 
 namespace AdapterArray1;
@@ -24,9 +25,9 @@ public class AdapterArrayTests
     }
 
     [Property]
-    public bool InputWithOnlyOneDifferencesResultsInInputCount(int count)
+    public bool InputWithOnlyOneDifferencesResultsInInputCount(PositiveInt count)
     {
-        var input = new Input(Enumerable.Range(1, count).ToArray());
+        var input = new Input(Enumerable.Range(1, count.Item).ToArray());
 
         return AdapterArray.CalcJoltageRating(input.Joltages) == input.Joltages.Length;
     }
