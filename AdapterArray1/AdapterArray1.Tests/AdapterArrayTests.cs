@@ -14,4 +14,13 @@ public class AdapterArrayTests
     public bool OutputIsSmallerThanOrEqualToInputCount(Input input) =>
         AdapterArray.CalcJoltageRating(input.Joltages) <= input.Joltages.Length;
 
+    [Property]
+    public bool InputOrderHasNoImpactOnOutput(Input input)
+    {
+        var unsorted = AdapterArray.CalcJoltageRating(input.Joltages);
+        var sorted = AdapterArray.CalcJoltageRating(input.Joltages.OrderBy(it => it).ToArray());
+        
+        return unsorted == sorted;
+    }
+    
 }
