@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AdapterArray1.Core\AdapterArray1.Core.csproj" />
+        <ProjectReference Include="..\AdapterArray1.Core\AdapterArray1.Core.csproj"/>
     </ItemGroup>
 
 </Project>
