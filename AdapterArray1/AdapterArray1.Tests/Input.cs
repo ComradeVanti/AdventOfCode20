@@ -1,4 +1,6 @@
-﻿namespace AdapterArray1;
+﻿using System.Linq;
+
+namespace AdapterArray1;
 
 public readonly struct Input
 {
@@ -8,5 +10,8 @@ public readonly struct Input
 
     public Input(int[] joltages) =>
         Joltages = joltages;
+
+    public override string ToString() =>
+        string.Concat(Joltages.Select(it => $"{it}, "));
 
 }
