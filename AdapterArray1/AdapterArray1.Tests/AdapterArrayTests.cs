@@ -19,8 +19,16 @@ public class AdapterArrayTests
     {
         var unsorted = AdapterArray.CalcJoltageRating(input.Joltages);
         var sorted = AdapterArray.CalcJoltageRating(input.Joltages.OrderBy(it => it).ToArray());
-        
+
         return unsorted == sorted;
     }
-    
+
+    [Property]
+    public bool InputWithOnlyOneDifferencesResultsInInputCount(int count)
+    {
+        var input = new Input(Enumerable.Range(1, count).ToArray());
+
+        return AdapterArray.CalcJoltageRating(input.Joltages) == input.Joltages.Length;
+    }
+
 }
