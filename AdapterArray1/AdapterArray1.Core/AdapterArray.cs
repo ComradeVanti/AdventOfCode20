@@ -4,6 +4,14 @@ public static class AdapterArray {
 
 	public static int CalcJoltageRating(int[] joltages) {
 
+		/*
+		 
+		var diffs = joltages.Sort().Prepend(0).Diffs().Append(3).ToArray();
+
+        return diffs.CountItem(1) * diffs.CountItem(3);
+		 
+		 */
+		
 		var sortedJoltages = joltages.OrderBy(it => it).ToArray();
 		var oneCount = 0;
 		var threeCount = 1;
