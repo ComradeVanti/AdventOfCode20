@@ -19,6 +19,8 @@ public readonly struct Input
 
     public int Count => Expenses.Count;
 
+    public int CorrectSolution => SearchPair.Item1 * SearchPair.Item2;
+
 
     public Input(ImmutableList<int> expenses, ImmutableList<(int, int)> pairs)
     {
