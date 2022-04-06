@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportRepair2.Core", "ReportRepair2.Core\ReportRepair2.Core.csproj", "{927769DE-EBD3-4733-8AB8-6046BD9FF279}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportRepair2.App", "ReportRepair2.App\ReportRepair2.App.csproj", "{EEEC3A77-57A3-4384-9510-3728B1A678FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportRepair2.Tests", "ReportRepair2.Tests\ReportRepair2.Tests.csproj", "{FA5C97AB-BF00-45C7-99CB-4A3E9A0216BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{927769DE-EBD3-4733-8AB8-6046BD9FF279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{927769DE-EBD3-4733-8AB8-6046BD9FF279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{927769DE-EBD3-4733-8AB8-6046BD9FF279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{927769DE-EBD3-4733-8AB8-6046BD9FF279}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEEC3A77-57A3-4384-9510-3728B1A678FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEEC3A77-57A3-4384-9510-3728B1A678FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEEC3A77-57A3-4384-9510-3728B1A678FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEEC3A77-57A3-4384-9510-3728B1A678FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA5C97AB-BF00-45C7-99CB-4A3E9A0216BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA5C97AB-BF00-45C7-99CB-4A3E9A0216BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA5C97AB-BF00-45C7-99CB-4A3E9A0216BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA5C97AB-BF00-45C7-99CB-4A3E9A0216BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
