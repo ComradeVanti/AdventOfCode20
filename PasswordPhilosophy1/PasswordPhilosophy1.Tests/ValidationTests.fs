@@ -2,8 +2,9 @@
 
 open FsCheck.Xunit
 open PasswordPhilosophy1.PasswordGen
+open PasswordPhilosophy1.PuzzleInputGen
 
-[<Properties(Arbitrary = [| typeof<ArbPasswordLogs> |])>]
+[<Properties(Arbitrary = [| typeof<ArbPasswordLogs>; typeof<ArbPuzzleInput> |])>]
 module ValidationTests =
 
     [<Property>]
@@ -13,3 +14,7 @@ module ValidationTests =
     [<Property>]
     let ``Invalid logs are correctly categorized`` (InvalidLog log) =
         log |> (not << Validation.IsValid)
+
+    [<Property>]
+    let ``Correct number of invalid logs is found`` (input: PuzzleInput) =
+        input.Entries |> Validation.CountInvalid = input.InvalidCount
