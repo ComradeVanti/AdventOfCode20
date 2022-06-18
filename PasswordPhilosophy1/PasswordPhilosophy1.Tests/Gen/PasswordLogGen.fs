@@ -32,8 +32,7 @@ let getLogWithLetterCount (policy: Policy) count =
 let genValidPasswordFor (policy: Policy) =
     gen {
         let! letterCount = Gen.choose (policy.MinCount, policy.MaxCount)
-        let! log = getLogWithLetterCount policy letterCount
-        return ValidLog log
+        return! getLogWithLetterCount policy letterCount
     }
 
 let genInvalidPasswordFor (policy: Policy) =
@@ -42,23 +41,24 @@ let genInvalidPasswordFor (policy: Policy) =
             Gen.oneof [ Gen.choose (0, policy.MinCount - 1)
                         Gen.choose (policy.MaxCount + 1, policy.MaxCount + 5) ]
 
-        let! log = getLogWithLetterCount policy letterCount
-        return InvalidLog log
+        return! getLogWithLetterCount policy letterCount
     }
 
-let genValidPassword =
+let genValidLog =
     gen {
         let! policy = genPolicy
         return! genValidPasswordFor policy
     }
 
-let genInvalidPassword =
+let genInvalidLog =
     gen {
         let! policy = genPolicy
         return! genInvalidPasswordFor policy
     }
 
+let genLog = Gen.oneof [ genValidLog; genInvalidLog ]
 
 type ArbPasswordLogs =
-    static member Valid() = Arb.fromGen genValidPassword
-    static member Invalid() = Arb.fromGen genInvalidPassword
+    static member Valid() = Arb.fromGen (genValidLog |> Gen.map ValidLog)
+    static member Invalid() = Arb.fromGen (genInvalidLog |> Gen.map InvalidLog)
+    static member Default() = Arb.fromGen genLog
