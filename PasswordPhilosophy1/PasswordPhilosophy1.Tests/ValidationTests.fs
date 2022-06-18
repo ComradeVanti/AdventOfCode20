@@ -4,7 +4,7 @@ open FsCheck.Xunit
 open PasswordPhilosophy1.PasswordGen
 
 [<Properties(Arbitrary = [| typeof<ArbPasswordLogs> |])>]
-module ValidationGenTests =
+module ValidationTests =
 
     [<Property>]
     let ``Valid logs are correctly categorized`` (ValidLog log) =
