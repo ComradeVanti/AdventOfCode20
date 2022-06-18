@@ -4,8 +4,8 @@ open FsCheck
 open FsCheck.Xunit
 open PasswordPhilosophy1.PasswordGen
 
-[<Properties(Arbitrary = [| typeof<ArbPasswords> |])>]
-module PasswordGenTests =
+[<Properties(Arbitrary = [| typeof<ArbPasswordLogs> |])>]
+module PasswordLogGenTests =
 
     let countChar c s = s |> Seq.filter ((=) c) |> Seq.length
 
@@ -13,22 +13,24 @@ module PasswordGenTests =
 
     [<Property>]
     let ``Valid passwords contain the policy letter the correct number of times``
-        (ValidPasswordWithPolicy (password, policy))
+        (ValidLog log)
         =
-        let count = password |> countChar policy.Character
+        let count = log.Password |> countChar log.Policy.Character
 
-        let overMinCount = count >= policy.MinCount |@ "Over min count"
+        let overMinCount =
+            count >= log.Policy.MinCount |@ "Over min count"
 
         let underMaxCount =
-            count <= policy.MaxCount |@ "Under max count"
+            count <= log.Policy.MaxCount |@ "Under max count"
 
         overMinCount .&. underMaxCount
 
     [<Property>]
     let ``Valid passwords contain between 1 and 10 non-policy letters``
-        (ValidPasswordWithPolicy (password, policy))
+        (ValidLog log)
         =
-        let otherCounts = password |> countCharsExcept policy.Character
+        let otherCounts =
+            log.Password |> countCharsExcept log.Policy.Character
 
         let overMinCount = otherCounts >= 1 |@ "Over min count"
         let underMaxCount = otherCounts <= 10 |@ "Under max count"
@@ -37,25 +39,25 @@ module PasswordGenTests =
 
     [<Property>]
     let ``Invalid passwords contain the policy letter not often enough or too often``
-        (InvalidPasswordWithPolicy (password, policy))
+        (InvalidLog log)
         =
-        let count = password |> countChar policy.Character
+        let count = log.Password |> countChar log.Policy.Character
 
         let underMinCount =
-            count < policy.MinCount
+            count < log.Policy.MinCount
             |@ $"Under min count (%d{count})"
 
         let overMaxCount =
-            count > policy.MaxCount
-            |@ $"Over max count (%d{count})"
+            count > log.Policy.MaxCount |@ $"Over max count (%d{count})"
 
         underMinCount .|. overMaxCount
 
     [<Property>]
     let ``Invalid passwords contain between 1 and 10 non-policy letters``
-        (InvalidPasswordWithPolicy (password, policy))
+        (InvalidLog log)
         =
-        let otherCounts = password |> countCharsExcept policy.Character
+        let otherCounts =
+            log.Password |> countCharsExcept log.Policy.Character
 
         let overMinCount =
             otherCounts >= 1 |@ $"Over min count %d{otherCounts}"
