@@ -3,7 +3,7 @@
 open FsCheck
 open PasswordGen
 
-type PuzzleInput = { Entries: PasswordLog list; InvalidCount: int }
+type PuzzleInput = { Entries: PasswordLog list; ValidCount: int }
 
 let genInput =
     Gen.sized (fun size ->
@@ -14,7 +14,7 @@ let genInput =
             let! valid = Gen.listOfLength validCount genValidLog
             let! invalid = Gen.listOfLength invalidCount genInvalidLog
 
-            return { Entries = valid @ invalid; InvalidCount = invalidCount }
+            return { Entries = valid @ invalid; ValidCount = validCount }
         })
 
 type ArbPuzzleInput =

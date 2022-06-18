@@ -9,7 +9,7 @@ public static class Validation
         return letterCount >= log.Policy.MinCount && letterCount <= log.Policy.MaxCount;
     }
 
-    public static int CountInvalid(IEnumerable<PasswordLog> logs) =>
-        logs.Count(log => !IsValid(log));
+    public static int CountValid(IEnumerable<PasswordLog> logs) =>
+        logs.Count(IsValid);
 
 }

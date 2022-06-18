@@ -16,5 +16,5 @@ module ValidationTests =
         log |> (not << Validation.IsValid)
 
     [<Property>]
-    let ``Correct number of invalid logs is found`` (input: PuzzleInput) =
-        input.Entries |> Validation.CountInvalid = input.InvalidCount
+    let ``Correct number of valid logs is found`` (input: PuzzleInput) =
+        input.Entries |> Validation.CountValid = input.ValidCount
