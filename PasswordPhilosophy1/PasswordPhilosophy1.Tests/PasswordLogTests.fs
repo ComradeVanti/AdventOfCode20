@@ -12,3 +12,7 @@ module PasswordLogTests =
     [<Property>]
     let ``Stringified logs are in the correct format`` (log: PasswordLog) =
         entryRegex.IsMatch (log.ToString())
+        
+    [<Property>]
+    let ``Logs are parsed correctly`` (log: PasswordLog) =
+        (log.ToString() |> PasswordLog.Parse) = log
