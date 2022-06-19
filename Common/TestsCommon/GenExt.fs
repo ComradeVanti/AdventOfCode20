@@ -1,10 +1,11 @@
 ﻿[<Microsoft.FSharp.Core.RequireQualifiedAccess>]
-module PasswordPhilosophy1.Gen
+module TestsCommon.Gen
 
 open FsCheck
 open Microsoft.FSharp.Collections
 
-let indexOf list = Gen.choose (0, (list |> List.length) - 1)
+let indexOf list =
+    Gen.choose (0, (list |> List.length) - 1)
 
 let rec randomized list =
     if list |> List.isEmpty then

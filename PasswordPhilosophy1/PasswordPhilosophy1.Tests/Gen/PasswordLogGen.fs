@@ -1,6 +1,7 @@
 ﻿module PasswordPhilosophy1.PasswordGen
 
 open FsCheck
+open TestsCommon
 open PasswordPhilosophy1
 open PasswordPhilosophy1.PolicyGen
 
