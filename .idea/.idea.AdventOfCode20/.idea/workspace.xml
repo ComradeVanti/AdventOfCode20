@@ -6,13 +6,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bb4a810-8837-40a2-b9ad-78ffb74cca65" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ReportRepair.Day1/App.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdventOfCode20.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AdventOfCode20.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common.Lib/Common.Lib.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/Common.Lib/Common.Lib.fsproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common.Test/Common.Test.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/Common.Test/Common.Test.fsproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportRepair.Common.Test/ReportRepair.Common.Test.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/ReportRepair.Common.Test/ReportRepair.Common.Test.fsproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportRepair.Common/ReportRepair.Common.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/ReportRepair.Common/ReportRepair.Common.fsproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportRepair.Day1.Tests/ReportRepair.Day1.Tests.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/ReportRepair.Day1.Tests/ReportRepair.Day1.Tests.fsproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportRepair.Day1/ReportRepair.Day1.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/ReportRepair.Day1/ReportRepair.Day1.fsproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/ReportRepair.Day1/App.fs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -78,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656175560379</updated>
-      <workItem from="1656175564473" duration="443000" />
+      <workItem from="1656175564473" duration="753000" />
     </task>
     <servers />
   </component>
