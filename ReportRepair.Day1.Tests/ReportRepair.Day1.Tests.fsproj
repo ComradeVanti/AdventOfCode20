@@ -5,6 +5,7 @@
 
         <IsPackable>false</IsPackable>
         <GenerateProgramFile>false</GenerateProgramFile>
+        <RootNamespace>AdventOfCode20.ReportRepair.Day1</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
