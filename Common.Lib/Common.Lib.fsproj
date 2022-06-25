@@ -8,6 +8,7 @@
 
     <ItemGroup>
         <Compile Include="OptionExt.fs"/>
+        <Compile Include="ListExt.fs"/>
     </ItemGroup>
 
 </Project>
