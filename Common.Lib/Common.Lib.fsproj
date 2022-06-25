@@ -6,4 +6,8 @@
         <RootNamespace>AdventOfCode20</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+        <Compile Include="OptionExt.fs"/>
+    </ItemGroup>
+
 </Project>
