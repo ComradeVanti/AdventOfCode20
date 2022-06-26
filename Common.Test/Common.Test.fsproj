@@ -7,11 +7,17 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="FsCheck" Version="2.16.5" />
+        <PackageReference Include="FsCheck" Version="2.16.5"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Common.Lib\Common.Lib.fsproj" />
+        <ProjectReference Include="..\Common.Lib\Common.Lib.fsproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Include="ListProps.fs"/>
+        <Compile Include="Props.fs"/>
+        <Compile Include="GenExt.fs"/>
     </ItemGroup>
 
 </Project>

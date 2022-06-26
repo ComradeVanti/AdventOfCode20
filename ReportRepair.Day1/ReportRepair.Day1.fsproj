@@ -8,12 +8,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Common.Lib\Common.Lib.fsproj" />
-      <ProjectReference Include="..\ReportRepair.Common\ReportRepair.Common.fsproj" />
+        <ProjectReference Include="..\Common.Lib\Common.Lib.fsproj"/>
+        <ProjectReference Include="..\ReportRepair.Common\ReportRepair.Common.fsproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Include="App.fs" />
+        <Compile Include="Lib.fs"/>
+        <Compile Include="App.fs"/>
     </ItemGroup>
 
 </Project>

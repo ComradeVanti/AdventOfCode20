@@ -10,16 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bb4a810-8837-40a2-b9ad-78ffb74cca65" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Common.Lib/ListExt.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common.Lib/OptionExt.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common.Lib/Parse.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common.Test/GenExt.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common.Test/ListProps.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReportRepair.Common.Test/Gen/ExpenseReportGen.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReportRepair.Common.Test/GenTests/ExpenseReportGenTests.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReportRepair.Common/Parse.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common.Lib/IO.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common.Test/Props.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReportRepair.Common.Test/Domain.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReportRepair.Day1.Tests/LibTests.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReportRepair.Day1/Lib.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AdventOfCode20/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdventOfCode20/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common.Lib/Common.Lib.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/Common.Lib/Common.Lib.fsproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common.Lib/ListExt.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Common.Lib/ListExt.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common.Test/Common.Test.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/Common.Test/Common.Test.fsproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReportRepair.Common.Test/ReportRepair.Common.Test.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/ReportRepair.Common.Test/ReportRepair.Common.Test.fsproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReportRepair.Common/ReportRepair.Common.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/ReportRepair.Common/ReportRepair.Common.fsproj" afterDir="false" />
@@ -47,16 +45,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Project.ReportRepair.Day1">
     <configuration name="ReportRepair.Common.Test" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -77,9 +75,9 @@
       </method>
     </configuration>
     <configuration name="ReportRepair.Day1" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/ReportRepair.Day1/bin/Debug/net6.0/ReportRepair.Day1.exe" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;C:\Users\kingv\Desktop\input.txt&quot;" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ReportRepair.Day1/bin/Debug/net6.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -89,7 +87,7 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value="net6.0" />
       <method v="2">
         <option name="Build" />
       </method>
@@ -112,6 +110,11 @@
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Project.ReportRepair.Common.Test" />
+      <item itemvalue=".NET Project.ReportRepair.Day1" />
+      <item itemvalue=".NET Project.ReportRepair.Day1.Tests" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -122,6 +125,7 @@
       <option name="presentableId" value="Default" />
       <updated>1656175560379</updated>
       <workItem from="1656175564473" duration="3753000" />
+      <workItem from="1656252107023" duration="1566000" />
     </task>
     <servers />
   </component>

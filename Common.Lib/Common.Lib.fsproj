@@ -10,6 +10,7 @@
         <Compile Include="OptionExt.fs"/>
         <Compile Include="ListExt.fs"/>
         <Compile Include="Parse.fs"/>
+        <Compile Include="IO.fs"/>
     </ItemGroup>
 
 </Project>
