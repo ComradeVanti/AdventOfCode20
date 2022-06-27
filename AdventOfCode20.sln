@@ -12,6 +12,10 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ReportRepair.Day1.Tests", "
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ReportRepair.Common.Test", "ReportRepair.Common.Test\ReportRepair.Common.Test.fsproj", "{2DBC0132-3E53-4771-B79F-3940B2E642C1}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ReportRepair.Day2", "ReportRepair.Day2\ReportRepair.Day2.fsproj", "{0827B74D-FFE2-44E1-A0AC-1C77FE65B002}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ReportRepair.Day2.Tests", "ReportRepair.Day2.Tests\ReportRepair.Day2.Tests.fsproj", "{8E579C6D-A37E-4CA9-914D-D98ED5777839}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +46,13 @@ Global
 		{2DBC0132-3E53-4771-B79F-3940B2E642C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DBC0132-3E53-4771-B79F-3940B2E642C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DBC0132-3E53-4771-B79F-3940B2E642C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0827B74D-FFE2-44E1-A0AC-1C77FE65B002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0827B74D-FFE2-44E1-A0AC-1C77FE65B002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0827B74D-FFE2-44E1-A0AC-1C77FE65B002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0827B74D-FFE2-44E1-A0AC-1C77FE65B002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E579C6D-A37E-4CA9-914D-D98ED5777839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E579C6D-A37E-4CA9-914D-D98ED5777839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E579C6D-A37E-4CA9-914D-D98ED5777839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E579C6D-A37E-4CA9-914D-D98ED5777839}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
