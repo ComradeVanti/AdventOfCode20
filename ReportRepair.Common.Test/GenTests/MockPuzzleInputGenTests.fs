@@ -11,25 +11,31 @@ open FsCheck.Xunit
 module MockPuzzleInputGenTests =
 
     let ``2020PairsIn`` list =
-
-        let ``2020PairsWith`` (index, expense) =
-            List.skip (index + 1) list
-            |> List.map ((+) expense)
-            |> List.countWith ((=) 2020)
-
         list
-        |> List.indexed
-        |> List.map ``2020PairsWith``
-        |> List.sum
+        |> List.pairs
+        |> Seq.countWith (fun (a, b) -> a + b = 2020)
+
+    let ``2020TripletsIn`` list =
+        list
+        |> List.triplets
+        |> Seq.countWith (fun (a, b, c) -> a + b + c = 2020)
 
 
     [<Property>]
-    let ``At least 2 items`` input =
+    let ``At least 3 items`` input =
         let (Entries expenses) = input.Report
-        expenses |> hasAtLeastLengthOf 2
+        expenses |> hasAtLeastLengthOf 3
 
     [<Property>]
     let ``Exactly one pair adds up to 2020`` input =
         let (Entries expenses) = input.Report
         let pairs = ``2020PairsIn`` expenses
         pairs = 1 |@ $"There were %d{pairs} pairs in the list."
+
+    [<Property>]
+    let ``Exactly one triplet adds up to 2020`` input =
+        let (Entries expenses) = input.Report
+        let triplets = ``2020TripletsIn`` expenses
+
+        triplets = 1
+        |@ $"There were %d{triplets} triplets in the list."
