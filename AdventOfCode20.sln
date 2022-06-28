@@ -16,6 +16,14 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ReportRepair.Day2", "Report
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ReportRepair.Day2.Tests", "ReportRepair.Day2.Tests\ReportRepair.Day2.Tests.fsproj", "{8E579C6D-A37E-4CA9-914D-D98ED5777839}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PasswordPhilosophy.Common", "PasswordPhilosophy.Common\PasswordPhilosophy.Common.fsproj", "{B650A22A-91AF-4B24-BB19-CF1D701CD9CA}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PasswordPhilosophy.Common.Test", "PasswordPhilosophy.Common.Test\PasswordPhilosophy.Common.Test.fsproj", "{505C1D59-219B-4E8D-997B-14FD7CF1A659}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PasswordPhilosophy.Day1", "PasswordPhilosophy.Day1\PasswordPhilosophy.Day1.fsproj", "{352EC9C0-964C-4E5B-AFF6-155BA86773B4}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PasswordPhilosophy.Day1.Tests", "PasswordPhilosophy.Day1.Tests\PasswordPhilosophy.Day1.Tests.fsproj", "{CEB6B8C7-B62E-44FF-9038-D9C6258B7A39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,5 +62,21 @@ Global
 		{8E579C6D-A37E-4CA9-914D-D98ED5777839}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E579C6D-A37E-4CA9-914D-D98ED5777839}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E579C6D-A37E-4CA9-914D-D98ED5777839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B650A22A-91AF-4B24-BB19-CF1D701CD9CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B650A22A-91AF-4B24-BB19-CF1D701CD9CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B650A22A-91AF-4B24-BB19-CF1D701CD9CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B650A22A-91AF-4B24-BB19-CF1D701CD9CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{505C1D59-219B-4E8D-997B-14FD7CF1A659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{505C1D59-219B-4E8D-997B-14FD7CF1A659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{505C1D59-219B-4E8D-997B-14FD7CF1A659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{505C1D59-219B-4E8D-997B-14FD7CF1A659}.Release|Any CPU.Build.0 = Release|Any CPU
+		{352EC9C0-964C-4E5B-AFF6-155BA86773B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{352EC9C0-964C-4E5B-AFF6-155BA86773B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{352EC9C0-964C-4E5B-AFF6-155BA86773B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{352EC9C0-964C-4E5B-AFF6-155BA86773B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEB6B8C7-B62E-44FF-9038-D9C6258B7A39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEB6B8C7-B62E-44FF-9038-D9C6258B7A39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEB6B8C7-B62E-44FF-9038-D9C6258B7A39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEB6B8C7-B62E-44FF-9038-D9C6258B7A39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
