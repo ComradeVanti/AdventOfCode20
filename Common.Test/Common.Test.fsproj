@@ -17,8 +17,10 @@
 
     <ItemGroup>
         <Compile Include="ListProps.fs" />
+        <Compile Include="SeqProps.fs" />
         <Compile Include="Props.fs" />
         <Compile Include="GenExt.fs" />
+        <Compile Include="Gen\CharGen.fs" />
     </ItemGroup>
 
 </Project>

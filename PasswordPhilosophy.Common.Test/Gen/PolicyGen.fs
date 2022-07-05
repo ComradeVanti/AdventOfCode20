@@ -2,9 +2,7 @@
 
 open AdventOfCode20
 open FsCheck
-
-let private genLetter =
-    Gen.choose (int 'a', int 'z') |> Gen.map char
+open AdventOfCode20.CharGen
 
 let private genMinCount = Gen.choose (1, 5)
 

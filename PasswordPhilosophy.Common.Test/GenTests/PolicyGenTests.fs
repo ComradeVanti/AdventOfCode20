@@ -21,33 +21,42 @@ module PolicyGenTests =
             |@ $"%A{policy.Letter} is lowercase"
 
         isLetter .&. isLowercase
-        
+
     [<Property>]
     let ``Min-counts are valid`` policy =
-        
+
         let minimumIsValid =
             let validMinimum = 1
+
             policy.MinCount >= validMinimum
             |@ $"Count (%d{policy.MinCount}) is >= 1"
-            
+
         let maximumIsValid =
             let validMaximum = 5
+
             policy.MinCount <= validMaximum
             |@ $"Count (%d{policy.MinCount}) is <= 5"
-            
+
         minimumIsValid .&. maximumIsValid
 
     [<Property>]
     let ``Max-counts are valid`` policy =
-        
+
         let minimumIsValid =
             let validMinimum = policy.MinCount + 1
+
             policy.MaxCount >= validMinimum
             |@ $"Count (%d{policy.MaxCount}) is >= %d{validMinimum}"
-            
+
         let maximumIsValid =
             let validMaximum = policy.MinCount + 5
+
             policy.MaxCount <= validMaximum
             |@ $"Count (%d{policy.MaxCount}) is <= %d{validMaximum}"
-            
+
         minimumIsValid .&. maximumIsValid
+
+    let policyIsValid policy =
+        ``Letters are valid`` policy
+        .&. ``Min-counts are valid`` policy
+        .&. ``Max-counts are valid`` policy

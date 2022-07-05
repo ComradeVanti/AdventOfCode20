@@ -13,7 +13,12 @@ let rec repeat seed count g =
         }
 
 let indexIn list =
-    gen {
-        let length = list |> List.length
-        return! Gen.choose (0, length - 1)
-    }
+    match list with
+    | [] -> Gen.constant 0
+    | _ ->
+        gen {
+            let length = list |> List.length
+            return! Gen.choose (0, length - 1)
+        }
+
+let except item g = g |> Gen.filter ((<>) item)
