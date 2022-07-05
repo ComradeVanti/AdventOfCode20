@@ -22,3 +22,14 @@ let indexIn list =
         }
 
 let except item g = g |> Gen.filter ((<>) item)
+
+let rec shuffledList list =
+    match list with
+    | [] -> Gen.constant []
+    | _ ->
+        gen {
+            let! index = indexIn list
+            let item = list |> List.item index
+            let! rest = list |> List.removeAt index |> shuffledList
+            return item :: rest
+        }

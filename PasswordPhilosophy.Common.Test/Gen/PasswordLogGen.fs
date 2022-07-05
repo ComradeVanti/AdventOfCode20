@@ -5,8 +5,8 @@ open AdventOfCode20.PasswordPhilosophy.PolicyGen
 open AdventOfCode20.CharGen
 open FsCheck
 
-type ValidLog = ValidLog of PasswordLog
-type InvalidLog = InvalidLog of PasswordLog
+type ValidPassword = ValidPassword of PasswordLog
+type InvalidPassword = InvalidPassword of PasswordLog
 
 let private genLargerPassword password times forbiddenLetter =
     let genAllowedLetter = genLetter |> Gen.except forbiddenLetter
@@ -66,7 +66,7 @@ type ArbPasswordLogs =
     static member Mixed() = Arb.fromGen genPasswordLog
 
     static member Valid() =
-        Arb.fromGen (genValidPasswordLog |> Gen.map ValidLog)
+        Arb.fromGen (genValidPasswordLog |> Gen.map ValidPassword)
 
     static member Invalid() =
-        Arb.fromGen (genInvalidPasswordLog |> Gen.map InvalidLog)
+        Arb.fromGen (genInvalidPasswordLog |> Gen.map InvalidPassword)

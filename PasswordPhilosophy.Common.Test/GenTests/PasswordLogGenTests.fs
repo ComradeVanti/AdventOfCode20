@@ -11,16 +11,7 @@ open FsCheck.Xunit
 [<Properties(Arbitrary = [| typeof<ArbPasswordLogs> |])>]
 module PasswordLogGenTests =
 
-    [<Property>]
-    let ``Policies are valid`` log = log.Policy |> policyIsValid
-
-    [<Property>]
-    let ``Passwords are not empty`` log = log.Password |> isNotEmpty
-
-    [<Property>]
-    let ``Valid passwords contain the policy letter a correct number of times``
-        (ValidLog log)
-        =
+    let hasValidPassword log =
         let letter = log.Policy.Letter
         let count = log.Password |> Seq.countItem letter
 
@@ -33,11 +24,8 @@ module PasswordLogGenTests =
             |@ $"Max-count valid (%i{count} should be <= %i{log.Policy.MaxCount})"
 
         minCountIsValid .&. maxCountIsValid
-        
-    [<Property>]
-    let ``Invalid passwords contain the policy letter an incorrect number of times``
-        (InvalidLog log)
-        =
+
+    let hasInvalidPassword log =
         let letter = log.Policy.Letter
         let count = log.Password |> Seq.countItem letter
 
@@ -50,3 +38,26 @@ module PasswordLogGenTests =
             |@ $"Max-count invalid (%i{count} should be > %i{log.Policy.MaxCount})"
 
         minCountIsInvalid .|. maxCountIsInvalid
+
+
+    [<Property>]
+    let ``Policy is valid`` log = log.Policy |> policyIsValid
+
+    [<Property>]
+    let ``Passwords are not empty`` log = log.Password |> isNotEmpty
+
+    [<Property>]
+    let ``Valid passwords contain the policy letter a correct number of times``
+        (ValidPassword log)
+        =
+        log |> hasValidPassword
+
+    [<Property>]
+    let ``Invalid passwords contain the policy letter an incorrect number of times``
+        (InvalidPassword log)
+        =
+        log |> hasInvalidPassword
+
+    let logIsValid log =
+        log |> ``Policy is valid``
+        .&. (log |> ``Passwords are not empty``)
