@@ -7,3 +7,5 @@ let applySeqF (mapF: seq<char> -> seq<char>) (s: string) =
     s |> mapF |> System.String.Concat
 
 let splitAt (c: char) (s: string) = s.Split c |> List.ofArray
+
+let countChar (c: char) (s: string) = s |> Seq.countItem c

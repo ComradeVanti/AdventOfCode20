@@ -18,5 +18,5 @@ let private genInput =
         return { Report = Logs logs; ValidCount = validCount }
     }
 
-type ArbInput =
+type ArbMockPuzzleInput =
     static member Default() = Arb.fromGen genInput

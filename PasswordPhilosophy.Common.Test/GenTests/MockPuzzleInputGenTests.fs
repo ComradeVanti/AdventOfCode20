@@ -7,7 +7,7 @@ open AdventOfCode20.PasswordPhilosophy.PasswordLogGenTests
 open FsCheck
 open FsCheck.Xunit
 
-[<Properties(Arbitrary = [| typeof<ArbInput> |])>]
+[<Properties(Arbitrary = [| typeof<ArbMockPuzzleInput> |])>]
 module MockPuzzleInputGenTests =
 
     let private logsIn input =

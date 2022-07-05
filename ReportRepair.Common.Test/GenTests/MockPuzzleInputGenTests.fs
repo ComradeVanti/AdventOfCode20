@@ -13,12 +13,12 @@ module MockPuzzleInputGenTests =
     let ``2020PairsIn`` list =
         list
         |> List.pairs
-        |> Seq.countWith (fun (a, b) -> a + b = 2020)
+        |> Seq.countWhere (fun (a, b) -> a + b = 2020)
 
     let ``2020TripletsIn`` list =
         list
         |> List.triplets
-        |> Seq.countWith (fun (a, b, c) -> a + b + c = 2020)
+        |> Seq.countWhere (fun (a, b, c) -> a + b + c = 2020)
 
 
     [<Property>]
