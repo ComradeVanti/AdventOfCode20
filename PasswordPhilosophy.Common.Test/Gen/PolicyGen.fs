@@ -6,15 +6,18 @@ open AdventOfCode20.CharGen
 
 let private genMinCount = Gen.choose (1, 5)
 
-let private genMaxCountFor minCount =
-    Gen.choose (minCount + 1, minCount + 5)
+let private genMaxCountFor minCount = Gen.choose (minCount + 1, minCount + 5)
 
 let genPolicy =
     gen {
         let! letter = genLetter
         let! minCount = genMinCount
         let! maxCount = genMaxCountFor minCount
-        return { Letter = letter; MinCount = minCount; MaxCount = maxCount }
+
+        return
+            { Letter = letter
+              MinCount = minCount
+              MaxCount = maxCount }
     }
 
 type ArbPolicies =

@@ -38,7 +38,4 @@ let log s =
     | _ -> None
 
 let passwordReport lines =
-    lines
-    |> List.map log
-    |> Option.collect
-    |> Option.map Logs
+    lines |> List.map log |> Option.collect |> Option.map Logs
