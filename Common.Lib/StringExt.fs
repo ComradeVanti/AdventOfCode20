@@ -9,3 +9,5 @@ let applySeqF (mapF: seq<char> -> seq<char>) (s: string) =
 let splitAt (c: char) (s: string) = s.Split c |> List.ofArray
 
 let countChar (c: char) (s: string) = s |> Seq.countItem c
+
+let charAt index (s: string) = s |> Seq.item index

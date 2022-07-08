@@ -2,6 +2,8 @@
 
 open FsCheck
 
-let (=?) a b = a = b |@ $"Expected %A{b} but got %A{a}."
+let (=?) a b = a = b |@ $"%A{a} and %A{b} are equal."
+
+let (<>?) a b = a <> b |@ $"%A{a} and %A{b} are unequal."
 
 let rejectWith reason = false |@ reason

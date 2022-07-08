@@ -4,45 +4,73 @@ open AdventOfCode20
 open AdventOfCode20.PasswordPhilosophy.PolicyGen
 open AdventOfCode20.CharGen
 open FsCheck
+open Microsoft.FSharp.Collections
 
 type ValidPassword = ValidPassword of PasswordLog
 type InvalidPassword = InvalidPassword of PasswordLog
 
-let private genLargerPassword password times forbiddenLetter =
-    let genAllowedLetter = genLetter |> Gen.except forbiddenLetter
-
-    let genLarger original =
-        gen {
-            let! letter = genAllowedLetter
-            let! index = original |> Seq.toList |> Gen.indexIn
-            return original |> String.applySeqF (Seq.insertAt index letter)
-        }
-
-    Gen.repeat password times genLarger
-
-
-let private genPasswordWith letter count =
-    gen {
-        let minGrowCount = if count = 0 then 1 else 0
-        let! growCount = Gen.choose (minGrowCount, 10)
-        let basePassword = String.repeatChar count letter
-        return! genLargerPassword basePassword growCount letter
-    }
-
 
 let private genValidPasswordFor policy =
     gen {
-        let! count = Gen.choose (policy.MinCount, policy.MaxCount)
-        return! genPasswordWith policy.Letter count
+        let minLength = policy.MaxCount + 1
+        let maxLength = minLength + 10
+
+        let requiredIndices =
+            Set.ofList [ policy.MinCount - 1; policy.MaxCount - 1 ]
+
+        let! length = Gen.choose (minLength, maxLength)
+        let! policyLetterCount = Gen.choose (policy.MinCount, policy.MaxCount)
+
+        let genIndex = Gen.choose (0, length - 1)
+        let genPolicyLetter = Gen.constant policy.Letter
+        let genNonPolicyLetter = genLetter |> Gen.except policy.Letter
+
+        let! policyLetterIndices =
+            genIndex
+            |> Gen.exceptAllIn requiredIndices
+            |> Gen.setWithCount (policyLetterCount - 2)
+            |> Gen.map (Set.union requiredIndices)
+
+        return!
+            Gen.initList length (fun index ->
+                if policyLetterIndices |> Set.contains index then
+                    genPolicyLetter
+                else
+                    genNonPolicyLetter)
+            |> Gen.map System.String.Concat
     }
 
 let private genInvalidPasswordFor policy =
     gen {
-        let! count =
-            Gen.oneof [ Gen.choose (0, policy.MinCount - 1)
-                        Gen.choose (policy.MaxCount + 1, policy.MaxCount + 10) ]
+        let minLength = policy.MaxCount + 1
+        let maxLength = minLength + 10
 
-        return! genPasswordWith policy.Letter count
+        let forbiddenIndices =
+            Set.ofList [ policy.MinCount - 1; policy.MaxCount - 1 ]
+
+        let! length = Gen.choose (minLength, maxLength)
+
+        let! policyLetterCount =
+            Gen.oneof [ Gen.choose (0, policy.MinCount - 1)
+                        if length > policy.MaxCount + 2 then
+                            Gen.choose (policy.MaxCount + 1, length - 2)]
+
+        let genIndex = Gen.choose (0, length - 1)
+        let genPolicyLetter = Gen.constant policy.Letter
+        let genNonPolicyLetter = genLetter |> Gen.except policy.Letter
+
+        let! policyLetterIndices =
+            genIndex
+            |> Gen.exceptAllIn forbiddenIndices
+            |> Gen.setWithCount policyLetterCount
+
+        return!
+            Gen.initList length (fun index ->
+                if policyLetterIndices |> Set.contains index then
+                    genPolicyLetter
+                else
+                    genNonPolicyLetter)
+            |> Gen.map System.String.Concat
     }
 
 let genValidPasswordLog =
