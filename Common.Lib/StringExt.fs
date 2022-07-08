@@ -11,3 +11,5 @@ let splitAt (c: char) (s: string) = s.Split c |> List.ofArray
 let countChar (c: char) (s: string) = s |> Seq.countItem c
 
 let charAt index (s: string) = s |> Seq.item index
+
+let tryCharAt index (s: string) = s |> Seq.tryItem index

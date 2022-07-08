@@ -4,90 +4,133 @@ open AdventOfCode20
 open AdventOfCode20.Props
 open AdventOfCode20.PasswordPhilosophy.PasswordLogGen
 open AdventOfCode20.PasswordPhilosophy.PolicyGenTests
-open AdventOfCode20.SeqProps
 open FsCheck
 open FsCheck.Xunit
-
 
 [<Properties(Arbitrary = [| typeof<ArbPasswordLogs> |])>]
 module PasswordLogGenTests =
 
-    let hasValidPassword log =
+    let matchesLetterCount log =
         let letter = log.Policy.Letter
         let count = log.Password |> Seq.countItem letter
 
         let minCountIsValid =
             count >= log.Policy.MinCount
-            |@ $"Min-count valid (%i{count} should be >= %i{log.Policy.MinCount})"
+            |@ $"Min-count valid (%i{count})"
 
         let maxCountIsValid =
             count <= log.Policy.MaxCount
-            |@ $"Max-count valid (%i{count} should be <= %i{log.Policy.MaxCount})"
+            |@ $"Max-count valid (%i{count})"
 
-        minCountIsValid .&. maxCountIsValid
+        (minCountIsValid .&. maxCountIsValid) |@ "Matches count"
 
-    let hasInvalidPassword log =
+    let doesNotMatchLetterCount log =
         let letter = log.Policy.Letter
         let count = log.Password |> Seq.countItem letter
 
         let minCountIsInvalid =
             count < log.Policy.MinCount
-            |@ $"Min-count invalid (%i{count} should be < %i{log.Policy.MinCount})"
+            |@ $"Min-count invalid (%i{count})"
 
         let maxCountIsInvalid =
             count > log.Policy.MaxCount
-            |@ $"Max-count invalid (%i{count} should be > %i{log.Policy.MaxCount})"
+            |@ $"Max-count invalid (%i{count})"
 
-        minCountIsInvalid .|. maxCountIsInvalid
+        (minCountIsInvalid .|. maxCountIsInvalid)
+        |@ "Does not match count"
+
+    let matchesLetterPositions log =
+        let posA = log.Policy.MinCount - 1
+        let posB = log.Policy.MaxCount - 1
+
+        let letterA =
+            log.Password
+            |> String.tryCharAt posA
+            |> Option.defaultValue '?'
+
+        let letterB =
+            log.Password
+            |> String.tryCharAt posB
+            |> Option.defaultValue '?'
+
+        let positionAIsValid =
+            letterA =? log.Policy.Letter
+            |@ $"Position A correct (%i{posA})"
+
+        let positionBIsValid =
+            letterB =? log.Policy.Letter
+            |@ $"Position B correct (%i{posB})"
+
+        (positionAIsValid .&. positionBIsValid)
+        |@ "Matches positions"
+
+    let doesNotMatchLetterPositions log =
+        let posA = log.Policy.MinCount - 1
+        let posB = log.Policy.MaxCount - 1
+
+        let letterA =
+            log.Password
+            |> String.tryCharAt posA
+            |> Option.defaultValue '?'
+
+        let letterB =
+            log.Password
+            |> String.tryCharAt posB
+            |> Option.defaultValue '?'
+
+        let positionAIsValid =
+            letterA <>? log.Policy.Letter
+            |@ $"Position A incorrect (%i{posA})"
+
+        let positionBIsValid =
+            letterB <>? log.Policy.Letter
+            |@ $"Position B incorrect (%i{posB})"
+
+        (positionAIsValid .&. positionBIsValid)
+        |@ "Does not match positions"
+
+    let matchesDay1 log = log |> matchesLetterCount |@ "Matches day 1"
+
+    let matchesDay2 log = log |> matchesLetterPositions |@ "Matches day 2"
+
+    let doesNotMatchDay1 log =
+        log |> doesNotMatchLetterCount |@ "Does not match day 1"
+
+    let doesNotMatchDay2 log =
+        log |> doesNotMatchLetterPositions |@ "Does not match day 2"
 
     [<Property>]
     let ``Policy is valid`` log = log.Policy |> policyIsValid
 
     [<Property>]
     let ``Password has valid length`` log =
-        let minimumLength = log.Policy.MaxCount + 1
+        let lenght = log.Password |> String.length
 
         let hasMinimumLength =
-            log.Password |> String.length >= minimumLength
-            |@ $"Password has minimum length (%i{minimumLength})"
+            lenght >= MinPasswordLength
+            |@ $"Password has minimum length (%i{lenght})"
 
         hasMinimumLength
 
     [<Property>]
-    let ``Passwords are not empty`` log = log.Password |> isNotEmpty
+    let ``MatchingDay1 generated correctly`` (MatchingDay1 log) =
+        (log |> matchesDay1) .&. (log |> doesNotMatchDay2)
+        |@ "Matches only day 1"
 
     [<Property>]
-    let ``Valid passwords contain the policy letter a correct number of times``
-        (ValidPassword log)
-        =
-        log |> hasValidPassword
+    let ``MatchingDay2 generated correctly`` (MatchingDay2 log) =
+        log |> matchesDay2 |@ "Matches only day 2"
 
     [<Property>]
-    let ``Valid passwords have policy letter at correct positions``
-        (ValidPassword log)
-        =
-        let letterA = log.Password |> String.charAt (log.Policy.MinCount - 1)
-        let letterB = log.Password |> String.charAt (log.Policy.MaxCount - 1)
-
-        (letterA =? log.Policy.Letter)
-        .&. (letterB =? log.Policy.Letter)
+    let ``MatchingBoth generated correctly`` (MatchingBoth log) =
+        (log |> matchesDay1) .&. (log |> matchesDay2)
+        |@ "Matches both days"
 
     [<Property>]
-    let ``Invalid passwords contain the policy letter an incorrect number of times``
-        (InvalidPassword log)
-        =
-        log |> hasInvalidPassword
-        
-    [<Property>]
-    let ``Invalid passwords don't have policy letter at correct positions``
-        (InvalidPassword log)
-        =
-        let letterA = log.Password |> String.charAt (log.Policy.MinCount - 1)
-        let letterB = log.Password |> String.charAt (log.Policy.MaxCount - 1)
-
-        (letterA <>? log.Policy.Letter)
-        .|. (letterB <>? log.Policy.Letter)
+    let ``MatchingNeither generated correctly`` (MatchingNeither log) =
+        (log |> doesNotMatchDay1) .&. (log |> doesNotMatchDay2)
+        |@ "Matches neither days"
 
     let logIsValid log =
         log |> ``Policy is valid``
-        .&. (log |> ``Passwords are not empty``)
+        .&. (log |> ``Password has valid length``)

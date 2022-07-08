@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode20.PasswordPhilosophy.Day1
+﻿namespace AdventOfCode20.PasswordPhilosophy.Day2
 
 open AdventOfCode20.Props
 open AdventOfCode20.PasswordPhilosophy
@@ -10,4 +10,4 @@ module LibTests =
 
     [<Property>]
     let ``Finds correct count`` input =
-        countValid input.Report =? input.MatchingDay1Count
+        countValid input.Report =? input.MatchingDay2Count

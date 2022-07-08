@@ -3,6 +3,12 @@ module AdventOfCode20.Gen
 
 open FsCheck
 
+let bind f g =
+    gen {
+        let! gv = g |> Gen.map f
+        return! gv
+    }
+
 let rec repeat seed count g =
     if count = 0 then
         Gen.constant seed
@@ -68,5 +74,28 @@ let initList length f =
                 let! tail = initListAt (index + 1)
                 return head :: tail
             }
-        
+
     initListAt 0
+
+let split2 min max =
+    gen {
+        let delta = max - min
+        let! a = Gen.choose (0, delta)
+        let b = delta - a
+        return (a, b)
+    }
+
+let split3 min max =
+    gen {
+        let! a, bc = split2 min max
+        let! b, c = split2 0 bc
+        return (a, b, c)
+    }
+
+let split4 min max =
+    gen {
+        let! ab, cd = split2 min max
+        let! a, b = split2 0 ab
+        let! c, d = split2 0 cd
+        return (a, b, c, d)
+    }
