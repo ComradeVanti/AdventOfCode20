@@ -48,11 +48,11 @@ let genStructureFor policy matchesDay1 matchesDay2 : Gen<PasswordStructure> =
         let minLength =
             max
                 (if not (requiredIndices |> Set.isEmpty) then
-                    max
-                        (policyLetterCount + forbiddenCount)
-                        ((requiredIndices |> Set.maxElement) + 1)
-                else
-                    policyLetterCount + forbiddenCount)
+                     max
+                         (policyLetterCount + forbiddenCount)
+                         ((requiredIndices |> Set.maxElement) + 1)
+                 else
+                     policyLetterCount + forbiddenCount)
                 MinPasswordLength
 
         let! length = Gen.choose (minLength, MaxPasswordLength)

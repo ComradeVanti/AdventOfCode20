@@ -13,7 +13,7 @@ let matches policy password =
 
     let hasLetterA = hasLetterAt (policy.MinCount - 1)
     let hasLetterB = hasLetterAt (policy.MaxCount - 1)
-    
+
     hasLetterA ||! hasLetterB
 
 let private isValid log = log.Password |> matches log.Policy

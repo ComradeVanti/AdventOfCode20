@@ -7,18 +7,18 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="OptionExt.fs" />
-        <Compile Include="OptionBuilder.fs" />
-        <Compile Include="ListExt.fs" />
-        <Compile Include="SeqExt.fs" />
-        <Compile Include="StringExt.fs" />
-        <Compile Include="Parse.fs" />
-        <Compile Include="IO.fs" />
-        <Compile Include="Operators.fs" />
+        <Compile Include="OptionExt.fs"/>
+        <Compile Include="OptionBuilder.fs"/>
+        <Compile Include="ListExt.fs"/>
+        <Compile Include="SeqExt.fs"/>
+        <Compile Include="StringExt.fs"/>
+        <Compile Include="Parse.fs"/>
+        <Compile Include="IO.fs"/>
+        <Compile Include="Operators.fs"/>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Update="FSharp.Core" Version="6.0.5" />
+        <PackageReference Update="FSharp.Core" Version="6.0.5"/>
     </ItemGroup>
 
 </Project>

@@ -5,7 +5,7 @@ open AdventOfCode20.TobogganTrajectory.ForestMapGen
 open FsCheck
 open FsCheck.Xunit
 
-[<Properties(Arbitrary = [|typeof<ArbForestMaps>|])>]
+[<Properties(Arbitrary = [| typeof<ArbForestMaps> |])>]
 module ForestMapGenTests =
 
     [<Property>]
@@ -14,24 +14,22 @@ module ForestMapGenTests =
         let height = ForestMap.heightOf map
 
         let widthCorrect = width >= 3 |@ $"Width too small (%i{width})"
-        let heightCorrect = height >= 2 |@ $"Height too small (%i{height})"
-        
+
+        let heightCorrect =
+            height >= 2 |@ $"Height too small (%i{height})"
+
         widthCorrect .&. heightCorrect
-        
+
     [<Property>]
     let ``All rows have same length`` map =
         ForestMap.rowsOf map
         |> List.map List.length
         |> List.allEqual
-        
+
     [<Property>]
     let ``Top-left is always empty`` map =
-        let tile = 
-            ForestMap.rowsOf map
-            |> List.head
-            |> List.head
-            
+        let tile = ForestMap.rowsOf map |> List.head |> List.head
+
         match tile with
         | Empty -> true
         | _ -> false
-        

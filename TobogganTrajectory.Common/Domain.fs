@@ -4,7 +4,7 @@ module AdventOfCode20.TobogganTrajectory.Domain
 type Tile =
     | Empty
     | Tree
-    
+
 (*
     [
         [ Empty; Empty; Empty ]

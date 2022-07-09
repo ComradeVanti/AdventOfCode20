@@ -9,13 +9,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Program.fs" />
+        <Compile Include="Program.fs"/>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="FsCheck.Xunit" Version="2.16.5" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
-        <PackageReference Include="xunit" Version="2.4.1" />
+        <PackageReference Include="FsCheck.Xunit" Version="2.16.5"/>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0"/>
+        <PackageReference Include="xunit" Version="2.4.1"/>
         <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
@@ -24,15 +24,15 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
-        <PackageReference Update="FSharp.Core" Version="6.0.5" />
+        <PackageReference Update="FSharp.Core" Version="6.0.5"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Common.Lib\Common.Lib.fsproj" />
-      <ProjectReference Include="..\Common.Test\Common.Test.fsproj" />
-      <ProjectReference Include="..\TobogganTrajectory.Common.Tests\TobogganTrajectory.Common.Tests.fsproj" />
-      <ProjectReference Include="..\TobogganTrajectory.Common\TobogganTrajectory.Common.fsproj" />
-      <ProjectReference Include="..\TobogganTrajectory.Day1\TobogganTrajectory.Day1.fsproj" />
+        <ProjectReference Include="..\Common.Lib\Common.Lib.fsproj"/>
+        <ProjectReference Include="..\Common.Test\Common.Test.fsproj"/>
+        <ProjectReference Include="..\TobogganTrajectory.Common.Tests\TobogganTrajectory.Common.Tests.fsproj"/>
+        <ProjectReference Include="..\TobogganTrajectory.Common\TobogganTrajectory.Common.fsproj"/>
+        <ProjectReference Include="..\TobogganTrajectory.Day1\TobogganTrajectory.Day1.fsproj"/>
     </ItemGroup>
 
 </Project>

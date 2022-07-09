@@ -1,7 +1,6 @@
 ﻿[<Microsoft.FSharp.Core.RequireQualifiedAccess>]
 module AdventOfCode20.TobogganTrajectory.Parse
 
-open System
 open AdventOfCode20
 open AdventOfCode20.TobogganTrajectory
 

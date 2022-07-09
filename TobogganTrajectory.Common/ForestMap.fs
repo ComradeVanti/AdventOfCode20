@@ -14,8 +14,6 @@ let widthOf map =
 let heightOf map = rowsOf map |> List.length
 
 let mapTileAt (x, y) f map =
-    rowsOf map
-    |> List.mapAt y (List.mapAt x f)
-    |> Tiles
+    rowsOf map |> List.mapAt y (List.mapAt x f) |> Tiles
 
 let setTileAt (x, y) tile map = map |> mapTileAt (x, y) (fun _ -> tile)
