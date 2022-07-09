@@ -33,3 +33,9 @@ let triplets items =
                     let third = items |> List.item p
                     yield (first, second, third)
     }
+
+let allEqual list = list |> List.distinct |> List.length = 1
+
+let mapAt i f list =
+    list
+    |> List.mapi (fun index item -> if index = i then f item else item)

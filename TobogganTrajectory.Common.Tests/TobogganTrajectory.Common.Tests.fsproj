@@ -9,6 +9,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Include="Gen\ForestMapGen.fs" />
+        <Compile Include="GenTests\ForestMapGenTests.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>
 
