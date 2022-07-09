@@ -11,6 +11,7 @@
     <ItemGroup>
         <Compile Include="Gen\ForestMapGen.fs" />
         <Compile Include="GenTests\ForestMapGenTests.fs" />
+        <Compile Include="ParseTests.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>
 
