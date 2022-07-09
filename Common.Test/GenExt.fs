@@ -99,3 +99,10 @@ let split4 min max =
         let! c, d = split2 0 cd
         return (a, b, c, d)
     }
+
+let pair g1 g2 =
+    gen {
+        let! v1 = g1
+        let! v2 = g2
+        return (v1, v2)
+    }

@@ -11,8 +11,10 @@ let matches policy password =
         |> String.tryCharAt index
         |> Option.contains policy.Letter
 
-    (hasLetterAt (policy.MinCount - 1))
-    && (hasLetterAt (policy.MaxCount - 1))
+    let hasLetterA = hasLetterAt (policy.MinCount - 1)
+    let hasLetterB = hasLetterAt (policy.MaxCount - 1)
+    
+    hasLetterA ||! hasLetterB
 
 let private isValid log = log.Password |> matches log.Policy
 
