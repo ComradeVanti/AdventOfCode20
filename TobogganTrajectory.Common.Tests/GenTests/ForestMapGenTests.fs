@@ -33,3 +33,8 @@ module ForestMapGenTests =
         match tile with
         | Empty -> true
         | _ -> false
+
+    let mapIsValid map =
+        (map |> ``Map is at least 3x2``)
+        .&. (map |> ``All rows have same length``)
+        .&. (map |> ``Top-left is always empty``)
