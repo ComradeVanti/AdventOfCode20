@@ -15,26 +15,26 @@ let private MaxPasswordLength = 20
 let private indicesOfInterestOf policy =
     (policy.MinCount - 1, policy.MaxCount - 1)
 
-let genStructureFor policy matchesDay1 matchesDay2 : Gen<PasswordStructure> =
+let genStructureFor policy matchesStar1 matchesStar2 : Gen<PasswordStructure> =
     gen {
         let minCount, maxCount = (policy.MinCount, policy.MaxCount)
         let indexA, indexB = indicesOfInterestOf policy
         let indicesOfInterest = Set.ofList [ indexA; indexB ]
 
         let! policyLetterCount =
-            if matchesDay1 && not matchesDay2 then
+            if matchesStar1 && not matchesStar2 then
                 Gen.choose (minCount, maxCount)
-            elif not matchesDay1 && matchesDay2 then
+            elif not matchesStar1 && matchesStar2 then
                 Gen.oneof [ if minCount > 1 then Gen.choose (1, minCount - 1)
                             Gen.choose (maxCount + 1, maxCount + 5) ]
-            elif matchesDay1 && matchesDay2 then
+            elif matchesStar1 && matchesStar2 then
                 Gen.choose (minCount, maxCount)
-            else // not matchesDay1 && not matchesDay2
+            else // not matchesStar1 && not matchesStar2
                 Gen.oneof [ Gen.choose (0, minCount - 1)
                             Gen.choose (maxCount + 1, maxCount + 5) ]
 
         let! requiredIndices, forbiddenIndices =
-            if matchesDay2 then
+            if matchesStar2 then
                 Gen.elements [ (Set.singleton indexA, Set.singleton indexB) // Only first
                                (Set.singleton indexB, Set.singleton indexA) ] // Only second
             else

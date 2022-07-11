@@ -9,8 +9,8 @@ open FsCheck
 open Microsoft.FSharp.Collections
 open Microsoft.FSharp.Core
 
-type MatchingDay1 = MatchingDay1 of PasswordLog
-type MatchingDay2 = MatchingDay2 of PasswordLog
+type MatchingStar1 = MatchingStar1 of PasswordLog
+type MatchingStar2 = MatchingStar2 of PasswordLog
 type MatchingNeither = MatchingNeither of PasswordLog
 type MatchingBoth = MatchingBoth of PasswordLog
 
@@ -31,36 +31,36 @@ let private genPasswordWith (structure: PasswordStructure) policyLetter =
     |> Gen.sequence
     |> Gen.map System.String.Concat
 
-let private genLog matchingDay1 matchingDay2 =
+let private genLog matchingStar1 matchingStar2 =
     gen {
         let! policy = genPolicy
-        let! structure = genStructureFor policy matchingDay1 matchingDay2
+        let! structure = genStructureFor policy matchingStar1 matchingStar2
         let! password = genPasswordWith structure policy.Letter
         return { Password = password; Policy = policy }
     }
 
-let genMatchingDay1Log = genLog true false
+let genMatchingStar1Log = genLog true false
 
-let genMatchingDay2Log = genLog false true
+let genMatchingStar2Log = genLog false true
 
 let genMatchingBothLog = genLog true true
 
 let genMatchingNeitherLog = genLog false false
 
 let genPasswordLog =
-    Gen.oneof [ genMatchingDay1Log
-                genMatchingDay2Log
+    Gen.oneof [ genMatchingStar1Log
+                genMatchingStar2Log
                 genMatchingBothLog
                 genMatchingNeitherLog ]
 
 type ArbPasswordLogs =
     static member Mixed() = Arb.fromGen genPasswordLog
 
-    static member Day1() =
-        Arb.fromGen (genMatchingDay1Log |> Gen.map MatchingDay1)
+    static member Star1() =
+        Arb.fromGen (genMatchingStar1Log |> Gen.map MatchingStar1)
 
-    static member Day2() =
-        Arb.fromGen (genMatchingDay2Log |> Gen.map MatchingDay2)
+    static member Star2() =
+        Arb.fromGen (genMatchingStar2Log |> Gen.map MatchingStar2)
 
     static member Both() =
         Arb.fromGen (genMatchingBothLog |> Gen.map MatchingBoth)

@@ -37,13 +37,13 @@ module PasswordLogGenTests =
 
         positionAIsValid ||! positionBIsValid
 
-    let matchesDay1 = matchesLetterCount
+    let matchesStar1 = matchesLetterCount
 
-    let matchesDay2 = matchesLetterPositions
+    let matchesStar2 = matchesLetterPositions
 
-    let doesNotMatchDay1 = not << matchesDay1
+    let doesNotMatchStar1 = not << matchesStar1
 
-    let doesNotMatchDay2 = not << matchesDay2
+    let doesNotMatchStar2 = not << matchesStar2
 
     [<Property>]
     let ``Policy is valid`` log = log.Policy |> policyIsValid
@@ -59,20 +59,20 @@ module PasswordLogGenTests =
         hasMinimumLength
 
     [<Property>]
-    let ``MatchingDay1 generated correctly`` (MatchingDay1 log) =
-        (log |> matchesDay1) && (log |> doesNotMatchDay2)
+    let ``MatchingStar1 generated correctly`` (MatchingStar1 log) =
+        (log |> matchesStar1) && (log |> doesNotMatchStar2)
 
     [<Property>]
-    let ``MatchingDay2 generated correctly`` (MatchingDay2 log) =
-        (log |> doesNotMatchDay1) && (log |> matchesDay2)
+    let ``MatchingStar2 generated correctly`` (MatchingStar2 log) =
+        (log |> doesNotMatchStar1) && (log |> matchesStar2)
 
     [<Property>]
     let ``MatchingBoth generated correctly`` (MatchingBoth log) =
-        (log |> matchesDay1) && (log |> matchesDay2)
+        (log |> matchesStar1) && (log |> matchesStar2)
 
     [<Property>]
     let ``MatchingNeither generated correctly`` (MatchingNeither log) =
-        (log |> doesNotMatchDay1) && (log |> doesNotMatchDay2)
+        (log |> doesNotMatchStar1) && (log |> doesNotMatchStar2)
 
     let logIsValid log =
         log |> ``Policy is valid``

@@ -6,25 +6,25 @@ open AdventOfCode20.PasswordPhilosophy.PasswordLogGen
 
 let private genInputWithCount count =
     gen {
-        let! day1Count, day2Count, neitherCount, bothCount =
+        let! star1Count, star2Count, neitherCount, bothCount =
             (Gen.split4 0 count)
 
-        let! day1 = Gen.listOfLength day1Count genMatchingDay1Log
-        let! day2 = Gen.listOfLength day2Count genMatchingDay2Log
+        let! star1 = Gen.listOfLength star1Count genMatchingStar1Log
+        let! star2 = Gen.listOfLength star2Count genMatchingStar2Log
         let! neither = Gen.listOfLength neitherCount genMatchingNeitherLog
         let! both = Gen.listOfLength bothCount genMatchingBothLog
 
-        let matchingDay1Count = day1Count + bothCount
-        let matchingDay2Count = day2Count + bothCount
+        let matchingStar1Count = star1Count + bothCount
+        let matchingStar2Count = star2Count + bothCount
 
         let! logs =
-            List.concat [ day1; day2; neither; both ]
+            List.concat [ star1; star2; neither; both ]
             |> Gen.shuffledList
 
         return
             { Report = Logs logs
-              MatchingDay1Count = matchingDay1Count
-              MatchingDay2Count = matchingDay2Count }
+              MatchingStar1Count = matchingStar1Count
+              MatchingStar2Count = matchingStar2Count }
     }
 
 let private genInput =

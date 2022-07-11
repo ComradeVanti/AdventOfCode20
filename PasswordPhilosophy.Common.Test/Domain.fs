@@ -3,8 +3,8 @@ module AdventOfCode20.PasswordPhilosophy.Domain
 
 type MockPuzzleInput =
     { Report: PasswordReport
-      MatchingDay1Count: int
-      MatchingDay2Count: int }
+      MatchingStar1Count: int
+      MatchingStar2Count: int }
 
 [<Literal>]
 let MinPasswordLength = 4
