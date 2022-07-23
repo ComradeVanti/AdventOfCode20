@@ -5,7 +5,7 @@ let countWith f list = list |> List.filter f |> List.length
 
 let countItem i = countWith ((=) i)
 
-let mult list = list |> List.reduce (*)
+let inline mult list = list |> List.reduce (*)
 
 let indices list = List.init (list |> List.length) id
 
