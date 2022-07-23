@@ -11,13 +11,13 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Update="FSharp.Core" Version="6.0.5" />
-    </ItemGroup>
-
-    <ItemGroup>
         <Compile Include="Domain.fs" />
         <Compile Include="Forest.fs" />
         <Compile Include="Parse.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Remove="FSharp.Core" />
     </ItemGroup>
 
 </Project>

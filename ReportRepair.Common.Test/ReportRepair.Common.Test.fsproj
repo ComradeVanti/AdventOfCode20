@@ -8,25 +8,19 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Common.Lib\Common.Lib.fsproj"/>
-        <ProjectReference Include="..\Common.Test\Common.Test.fsproj"/>
-        <ProjectReference Include="..\ReportRepair.Common\ReportRepair.Common.fsproj"/>
+        <ProjectReference Include="..\Common.Lib\Common.Lib.fsproj" />
+        <ProjectReference Include="..\Common.Test\Common.Test.fsproj" />
+        <ProjectReference Include="..\ReportRepair.Common\ReportRepair.Common.fsproj" />
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Include="Domain.fs"/>
-        <Compile Include="Gen\MockPuzzleInputGen.fs"/>
-        <Compile Include="GenTests\MockPuzzleInputGenTests.fs"/>
+        <Compile Include="Domain.fs" />
+        <Compile Include="Gen\MockPuzzleInputGen.fs" />
+        <Compile Include="GenTests\MockPuzzleInputGenTests.fs" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="coverlet.collector" Version="3.1.2">
-            <PrivateAssets>all</PrivateAssets>
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
-        <PackageReference Include="FsCheck.Xunit" Version="2.16.5"/>
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0"/>
-        <PackageReference Update="FSharp.Core" Version="6.0.5"/>
+        <PackageReference Remove="FSharp.Core" />
     </ItemGroup>
 
 </Project>
