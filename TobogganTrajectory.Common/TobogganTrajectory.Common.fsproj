@@ -7,17 +7,17 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Common.Lib\Common.Lib.fsproj"/>
+        <ProjectReference Include="..\Common.Lib\Common.Lib.fsproj" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Update="FSharp.Core" Version="6.0.5"/>
+        <PackageReference Update="FSharp.Core" Version="6.0.5" />
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Include="Domain.fs"/>
-        <Compile Include="ForestMap.fs"/>
-        <Compile Include="Parse.fs"/>
+        <Compile Include="Domain.fs" />
+        <Compile Include="Forest.fs" />
+        <Compile Include="Parse.fs" />
     </ItemGroup>
 
 </Project>

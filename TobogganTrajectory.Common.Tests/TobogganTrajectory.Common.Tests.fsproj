@@ -10,9 +10,9 @@
 
     <ItemGroup>
         <Compile Include="Domainfs.fs" />
-        <Compile Include="Gen\ForestMapGen.fs" />
+        <Compile Include="Gen\ForestGen.fs" />
         <Compile Include="Gen\MockPuzzleInputGen.fs" />
-        <Compile Include="GenTests\ForestMapGenTests.fs" />
+        <Compile Include="GenTests\ForestGenTests.fs" />
         <Compile Include="GenTests\MockPuzzleInputGenTests.fs" />
         <Compile Include="ParseTests.fs" />
         <Compile Include="Program.fs" />

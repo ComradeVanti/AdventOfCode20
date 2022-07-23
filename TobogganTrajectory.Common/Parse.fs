@@ -12,8 +12,8 @@ let private parseTile char =
 let private parseRow line =
     line |> Seq.map parseTile |> Seq.toList |> Option.collect
 
-let forestMap (lines: string list) =
+let forest (lines: string list) =
     lines
     |> List.map parseRow
     |> Option.collect
-    |> Option.map Tiles
+    |> Option.map Forest.fromTiles

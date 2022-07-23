@@ -1,4 +1,4 @@
-﻿module AdventOfCode20.TobogganTrajectory.ForestMapGen
+﻿module AdventOfCode20.TobogganTrajectory.ForestGen
 
 open AdventOfCode20
 open AdventOfCode20.TobogganTrajectory
@@ -24,7 +24,7 @@ let private genWidth = Gen.choose (MinWidth, MaxWidth)
 
 let private genHeight = Gen.choose (MinHeight, MaxHeight)
 
-let private genMapSize =
+let private genSize =
     gen {
         let! width = genWidth
         let! height = genHeight
@@ -33,12 +33,12 @@ let private genMapSize =
 
 let private genRow width = Gen.listOfLength width genTile
 
-let private genForestMapWithSize (width, height) =
-    Gen.listOfLength height (genRow width) |> Gen.map Tiles
+let private genForestWithSize (width, height) =
+    Gen.listOfLength height (genRow width) |> Gen.map Forest.fromTiles
 
-let genForestMapAndCollisionCount =
+let genForestAndCollisionCount =
     gen {
-        let! width, height = genMapSize
+        let! width, height = genSize
 
         let rec buildRows position index =
             gen {
@@ -62,10 +62,10 @@ let genForestMapAndCollisionCount =
             }
 
         let! tiles, count = buildRows 0 0
-        return (Tiles tiles, count)
+        return (Forest.fromTiles tiles, count)
     }
 
-let genForestMap = genForestMapAndCollisionCount |> Gen.map fst
+let genForest = genForestAndCollisionCount |> Gen.map fst
 
-type ArbForestMaps =
-    static member Default() = Arb.fromGen genForestMap
+type ArbForests =
+    static member Default() = Arb.fromGen genForest

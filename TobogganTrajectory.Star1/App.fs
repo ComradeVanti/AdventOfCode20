@@ -9,7 +9,7 @@ open AdventOfCode20.TobogganTrajectory.Star1
 let main args =
     let path = args |> Array.tryItem 0
     let lines = path |> Option.bind IO.tryReadLines
-    let map = lines |> Option.bind Parse.forestMap
+    let map = lines |> Option.bind Parse.forest
 
     match map |> Option.map countCollisions with
     | Some collisionCount ->

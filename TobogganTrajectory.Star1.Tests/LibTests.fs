@@ -10,4 +10,4 @@ module LibTests =
 
     [<Property>]
     let ``Finds correct collision-count`` input =
-        (countCollisions input.ForestMap) =? input.CollisionCount
+        (countCollisions input.Forest) =? input.CollisionCount

@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode20.TobogganTrajectory
 
 type MockPuzzleInput = {
-    ForestMap: ForestMap
+    Forest: Forest
     CollisionCount: int
 }

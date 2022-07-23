@@ -1,14 +1,14 @@
 ﻿namespace AdventOfCode20.TobogganTrajectory
 
 open AdventOfCode20.Props
-open AdventOfCode20.TobogganTrajectory.ForestMapGen
+open AdventOfCode20.TobogganTrajectory.ForestGen
 open FsCheck.Xunit
 
 
-[<Properties(Arbitrary = [| typeof<ArbForestMaps> |])>]
+[<Properties(Arbitrary = [| typeof<ArbForests> |])>]
 module ParseTests =
 
-    let private stringify map =
+    let private stringify forest =
 
         let stringifyTile tile =
             match tile with
@@ -18,12 +18,12 @@ module ParseTests =
         let stringifyRow row =
             row |> List.map stringifyTile |> System.String.Concat
 
-        ForestMap.rowsOf map |> List.map stringifyRow
+        Forest.rowsOf forest |> List.map stringifyRow
 
-    [<Property>]
-    let ``Maps are parsed correctly`` map =
-        let lines = stringify map
+    [<Property(MaxTest = 5)>]
+    let ``Forests are parsed correctly`` forest =
+        let lines = stringify forest
 
-        match Parse.forestMap lines with
-        | Some parsed -> parsed =? map
+        match Parse.forest lines with
+        | Some parsed -> parsed =? forest
         | None -> rejectWith "Could not parse"

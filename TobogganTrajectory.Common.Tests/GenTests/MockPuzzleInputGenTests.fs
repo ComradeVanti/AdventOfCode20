@@ -1,7 +1,7 @@
 ﻿namespace AdventOfCode20.TobogganTrajectory
 
 open AdventOfCode20.TobogganTrajectory.MockPuzzleInputGen
-open AdventOfCode20.TobogganTrajectory.ForestMapGenTests
+open AdventOfCode20.TobogganTrajectory.ForestGenTests
 open FsCheck.Xunit
 
 
@@ -9,4 +9,4 @@ open FsCheck.Xunit
 module MockPuzzleInputGenTests =
 
     [<Property>]
-    let ``Forest-map is valid`` input = input.ForestMap |> mapIsValid
+    let ``Forest is valid`` input = input.Forest |> mapIsValid
