@@ -11,5 +11,5 @@ module LibTests =
 
     [<Property>]
     let ``Finds correct collision-count`` input =
-        let x3y1Count = input.Collisions |> Map.find (XY(3,1))
+        let x3y1Count = input.Collisions |> Map.find (XY(3, 1))
         (countCollisions input.Forest) =? x3y1Count

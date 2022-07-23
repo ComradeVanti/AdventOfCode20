@@ -22,7 +22,7 @@ module ForestGenTests =
 
     [<Property>]
     let ``Top-left is always empty`` forest =
-        let tile =forest |> Forest.tile (XY(0, 0))
+        let tile = forest |> Forest.tile (XY(0, 0))
 
         match tile with
         | Empty -> true

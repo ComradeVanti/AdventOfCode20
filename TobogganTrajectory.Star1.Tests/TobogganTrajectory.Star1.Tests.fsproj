@@ -9,20 +9,20 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="LibTests.fs" />
-        <Compile Include="Program.fs" />
+        <Compile Include="LibTests.fs"/>
+        <Compile Include="Program.fs"/>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Remove="FSharp.Core" />
+        <PackageReference Remove="FSharp.Core"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Common.Lib\Common.Lib.fsproj" />
-        <ProjectReference Include="..\Common.Test\Common.Test.fsproj" />
-        <ProjectReference Include="..\TobogganTrajectory.Common.Tests\TobogganTrajectory.Common.Tests.fsproj" />
-        <ProjectReference Include="..\TobogganTrajectory.Common\TobogganTrajectory.Common.fsproj" />
-        <ProjectReference Include="..\TobogganTrajectory.Star1\TobogganTrajectory.Star1.fsproj" />
+        <ProjectReference Include="..\Common.Lib\Common.Lib.fsproj"/>
+        <ProjectReference Include="..\Common.Test\Common.Test.fsproj"/>
+        <ProjectReference Include="..\TobogganTrajectory.Common.Tests\TobogganTrajectory.Common.Tests.fsproj"/>
+        <ProjectReference Include="..\TobogganTrajectory.Common\TobogganTrajectory.Common.fsproj"/>
+        <ProjectReference Include="..\TobogganTrajectory.Star1\TobogganTrajectory.Star1.fsproj"/>
     </ItemGroup>
 
 </Project>

@@ -8,17 +8,17 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Lib.fs" />
-        <Compile Include="App.fs" />
+        <Compile Include="Lib.fs"/>
+        <Compile Include="App.fs"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Common.Lib\Common.Lib.fsproj" />
-        <ProjectReference Include="..\ReportRepair.Common\ReportRepair.Common.fsproj" />
+        <ProjectReference Include="..\Common.Lib\Common.Lib.fsproj"/>
+        <ProjectReference Include="..\ReportRepair.Common\ReportRepair.Common.fsproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Remove="FSharp.Core" />
+        <PackageReference Remove="FSharp.Core"/>
     </ItemGroup>
 
 </Project>

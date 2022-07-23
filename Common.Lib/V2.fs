@@ -20,4 +20,4 @@ module V2 =
     let inline add other v =
         let x1, y1 = xyOf v
         let x2, y2 = xyOf other
-        XY (x1 + x2, y1 + y2)
+        XY(x1 + x2, y1 + y2)

@@ -12,7 +12,7 @@ module LibTests =
     let totalCount input =
 
         let countFor slope = int64 (input.Collisions |> Map.find slope)
-        
+
         let x1y1Count = countFor (XY(1, 1))
         let x3y1Count = countFor (XY(3, 1))
         let x5y1Count = countFor (XY(5, 1))

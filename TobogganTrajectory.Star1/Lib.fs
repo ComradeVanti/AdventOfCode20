@@ -5,6 +5,4 @@ open AdventOfCode20
 open AdventOfCode20.TobogganTrajectory
 
 let countCollisions forest =
-    forest
-    |> Forest.tilesOn (XY(3,1))
-    |> List.countItem Tree
+    forest |> Forest.tilesOn (XY(3, 1)) |> List.countItem Tree
