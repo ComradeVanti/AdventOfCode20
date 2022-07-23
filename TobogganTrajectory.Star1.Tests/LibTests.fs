@@ -1,5 +1,6 @@
 ﻿namespace AdventOfCode20.TobogganTrajectory.Star1
 
+open AdventOfCode20
 open AdventOfCode20.Props
 open AdventOfCode20.TobogganTrajectory
 open AdventOfCode20.TobogganTrajectory.MockPuzzleInputGen
@@ -10,4 +11,5 @@ module LibTests =
 
     [<Property>]
     let ``Finds correct collision-count`` input =
-        (countCollisions input.Forest) =? input.CollisionCount
+        let x3y1Count = input.Collisions |> Map.find (XY(3,1))
+        (countCollisions input.Forest) =? x3y1Count
