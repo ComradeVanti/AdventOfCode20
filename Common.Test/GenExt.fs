@@ -106,3 +106,14 @@ let pair g1 g2 =
         let! v2 = g2
         return (v1, v2)
     }
+
+let rec fold f seed list =
+    match list with
+    | [] -> Gen.constant seed
+    | head :: tail ->
+        gen {
+            let! value = f seed head
+            return! fold f value tail
+        }
+
+let foldn f seed i = List.init i id |> fold (fun acc _ -> f acc) seed

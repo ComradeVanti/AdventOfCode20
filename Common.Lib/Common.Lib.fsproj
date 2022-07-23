@@ -10,6 +10,7 @@
         <Compile Include="OptionExt.fs" />
         <Compile Include="OptionBuilder.fs" />
         <Compile Include="ListExt.fs" />
+        <Compile Include="MapExt.fs" />
         <Compile Include="SeqExt.fs" />
         <Compile Include="StringExt.fs" />
         <Compile Include="Parse.fs" />

@@ -1,14 +1,14 @@
 ﻿module AdventOfCode20.TobogganTrajectory.MockPuzzleInputGen
 
-open AdventOfCode20
+open AdventOfCode20.TobogganTrajectory.CollisionCountsGen
 open AdventOfCode20.TobogganTrajectory.ForestGen
 open FsCheck
 
 let genMockPuzzleInput =
     gen {
-        let! forest, count = genForestAndCollisionCount
-        let collisionCounts = Map [ (XY(3, 1), count) ]
-        return { Forest = forest; Collisions = collisionCounts }
+        let! collisions = genCollisions
+        let! forest = genForestWithCollisions collisions
+        return { Forest = forest; Collisions = collisions }
     }
 
 type ArbPuzzleInputs =

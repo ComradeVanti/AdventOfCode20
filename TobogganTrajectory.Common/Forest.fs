@@ -1,6 +1,7 @@
 ﻿namespace AdventOfCode20.TobogganTrajectory
 
 open AdventOfCode20
+open AdventOfCode20.TobogganTrajectory
 
 type Forest = private TileGrid of Grid<Tile>
 
@@ -23,31 +24,42 @@ module Forest =
     let updateAt i tile forest =
         (gridOf forest) |> Grid.updateAt i tile |> TileGrid
 
-    let tryTile i forest =
-        let x, y = V2.xyOf i
-        let width = widthOf forest
-        let repeated = XY(x % width, y)
+    let inForestOfSize size f = f size
 
+    let inForest forest f =
+        let size = widthOf forest, heightOf forest
+        inForestOfSize size f
+
+    let repeat i =
+        (fun (width, _) ->
+            let x, y = V2.xyOf i
+            XY(x % width, y))
+
+    let tryTile i forest =
+        let repeated = repeat i |> (inForest forest)
         gridOf forest |> Grid.tryItem repeated
 
     let tile i forest = forest |> tryTile i |> Option.get
 
     let hasTreeAt i forest = forest |> tryTile i |> Option.contains Tree
 
-    let positionsOn slope forest =
+    let positionsOn slope =
+        (fun size ->
 
-        let width, height = widthOf forest, heightOf forest
+            let _, height = size
 
-        let rec positionsStartingAt pos =
-            if V2.yOf pos = height then
-                []
-            else
-                let nextPos = pos |> V2.add slope
-                pos :: (positionsStartingAt nextPos)
+            let rec positionsStartingAt pos =
+                if V2.yOf pos >= height then
+                    []
+                else
+                    let nextPos =
+                        pos |> V2.add slope |> repeat |> (inForestOfSize size)
 
-        positionsStartingAt (XY(0, 0))
+                    pos :: (positionsStartingAt nextPos)
+
+            positionsStartingAt (XY(0, 0)))
 
     let tilesOn slope forest =
-        forest
-        |> positionsOn slope
+        positionsOn slope
+        |> inForest forest
         |> List.map (fun pos -> forest |> tile pos)

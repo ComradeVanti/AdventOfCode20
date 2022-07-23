@@ -36,7 +36,7 @@ let triplets items =
                     yield (first, second, third)
     }
 
-let allEqual list = list |> List.distinct |> List.length = 1
+let allEqual list = list |> List.distinct |> List.length <= 1
 
 let mapAt i f list =
     list
