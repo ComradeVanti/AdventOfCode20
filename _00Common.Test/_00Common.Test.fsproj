@@ -29,6 +29,7 @@
         <Compile Include="GenExt.fs" />
         <Compile Include="PropExt.fs" />
         <Compile Include="Gen\CharGen.fs" />
+        <Compile Include="Program.fs" />
     </ItemGroup>
 
 </Project>
