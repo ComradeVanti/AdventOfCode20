@@ -28,6 +28,7 @@
         <Compile Include="Props.fs" />
         <Compile Include="GenExt.fs" />
         <Compile Include="PropExt.fs" />
+        <Compile Include="ExampleInput.fs" />
         <Compile Include="Gen\CharGen.fs" />
     </ItemGroup>
 
