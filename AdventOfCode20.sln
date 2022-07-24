@@ -40,11 +40,11 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_03TobogganTrajectory.Star2
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_03TobogganTrajectory.Star2.Tests", "_03TobogganTrajectory.Star2.Tests\_03TobogganTrajectory.Star2.Tests.fsproj", "{EA763414-97C2-49DD-84B7-8E760705C059}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_04PasswordProcessing.Common", "_04PasswordProcessing.Common\_04PasswordProcessing.Common.fsproj", "{45111407-8E33-4291-B553-31D69B04A012}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_04PassportProcessing.Common", "_04PassportProcessing.Common\_04PassportProcessing.Common.fsproj", "{45111407-8E33-4291-B553-31D69B04A012}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_04PasswordProcessing.Common.Tests", "_04PasswordProcessing.Common.Tests\_04PasswordProcessing.Common.Tests.fsproj", "{6CE366CA-FE70-49B5-9BE2-497BCDCBD490}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_04PassportProcessing.Common.Tests", "_04PassportProcessing.Common.Tests\_04PassportProcessing.Common.Tests.fsproj", "{6CE366CA-FE70-49B5-9BE2-497BCDCBD490}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_04PasswordProcessing.Star1.Tests", "_04PasswordProcessing.Star1.Tests\_04PasswordProcessing.Star1.Tests.fsproj", "{09FE0A79-147D-44C9-A2CB-E73CDA95C2C2}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_04PassportProcessing.Star1.Tests", "_04PassportProcessing.Star1.Tests\_04PassportProcessing.Star1.Tests.fsproj", "{09FE0A79-147D-44C9-A2CB-E73CDA95C2C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

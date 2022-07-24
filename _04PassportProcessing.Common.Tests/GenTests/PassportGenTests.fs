@@ -1,7 +1,7 @@
-﻿namespace AdventOfCode20.PasswordProcessing
+﻿namespace AdventOfCode20.PassportProcessing
 
 open AdventOfCode20
-open AdventOfCode20.PasswordProcessing.PassportGen
+open AdventOfCode20.PassportProcessing.PassportGen
 open FsCheck
 open FsCheck.Xunit
 

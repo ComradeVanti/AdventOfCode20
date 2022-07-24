@@ -1,8 +1,8 @@
-﻿namespace AdventOfCode20.PasswordProcessing.Star1
+﻿namespace AdventOfCode20.PassportProcessing.Star1
 
-open AdventOfCode20.PasswordProcessing
 open AdventOfCode20.Props
-open AdventOfCode20.PasswordProcessing.Star1.MockPuzzleInputGen
+open AdventOfCode20.PassportProcessing
+open AdventOfCode20.PassportProcessing.Star1.MockPuzzleInputGen
 open FsCheck.Xunit
 
 [<Properties(Arbitrary = [| typeof<ArbPuzzleInput> |])>]

@@ -1,8 +1,8 @@
-﻿module AdventOfCode20.PasswordProcessing.Star1.MockPuzzleInputGen
+﻿module AdventOfCode20.PassportProcessing.Star1.MockPuzzleInputGen
 
 open AdventOfCode20
-open AdventOfCode20.PasswordProcessing
-open AdventOfCode20.PasswordProcessing.PassportGen
+open AdventOfCode20.PassportProcessing
+open AdventOfCode20.PassportProcessing.PassportGen
 open FsCheck
 
 let private genBatchOfLength length validCount =

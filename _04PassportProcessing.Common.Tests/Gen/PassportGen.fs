@@ -1,4 +1,4 @@
-﻿module AdventOfCode20.PasswordProcessing.PassportGen
+﻿module AdventOfCode20.PassportProcessing.PassportGen
 
 open AdventOfCode20
 open AdventOfCode20.CharGen

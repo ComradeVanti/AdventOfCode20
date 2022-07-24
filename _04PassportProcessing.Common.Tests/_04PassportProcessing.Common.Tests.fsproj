@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+
+        <IsPackable>false</IsPackable>
+        <GenerateProgramFile>false</GenerateProgramFile>
+        <AssemblyName>PassportProcessing.Common.Tests</AssemblyName>
+        <RootNamespace>AdventOfCode20.PassportProcessing</RootNamespace>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Gen\PassportGen.fs" />
+        <Compile Include="GenTests\PassportGenTests.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Remove="FSharp.Core" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\_00Common.Lib\_00Common.Lib.fsproj" />
+        <ProjectReference Include="..\_00Common.Test\_00Common.Test.fsproj" />
+        <ProjectReference Include="..\_04PassportProcessing.Common\_04PassportProcessing.Common.fsproj" />
+    </ItemGroup>
+
+</Project>

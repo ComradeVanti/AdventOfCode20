@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode20.PasswordProcessing
+﻿namespace AdventOfCode20.PassportProcessing
 
 type Year = int
 

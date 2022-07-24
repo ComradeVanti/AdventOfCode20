@@ -3,20 +3,20 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <AssemblyName>PasswordProcessing.Common</AssemblyName>
-        <RootNamespace>AdventOfCode20.PasswordProcessing</RootNamespace>
+        <AssemblyName>PassportProcessing.Common</AssemblyName>
+        <RootNamespace>AdventOfCode20.PassportProcessing</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\_00Common.Lib\_00Common.Lib.fsproj"/>
+        <ProjectReference Include="..\_00Common.Lib\_00Common.Lib.fsproj" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Remove="FSharp.Core"/>
+        <PackageReference Remove="FSharp.Core" />
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Include="Domain.fs"/>
+        <Compile Include="Domain.fs" />
     </ItemGroup>
 
 </Project>
