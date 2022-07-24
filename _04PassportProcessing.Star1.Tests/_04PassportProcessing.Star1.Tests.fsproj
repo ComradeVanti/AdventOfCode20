@@ -4,7 +4,6 @@
         <TargetFramework>net6.0</TargetFramework>
 
         <IsPackable>false</IsPackable>
-        <GenerateProgramFile>false</GenerateProgramFile>
         <AssemblyName>PassportProcessing.Star1.Tests</AssemblyName>
         <RootNamespace>AdventOfCode20.PassportProcessing.Star1</RootNamespace>
         <OutputType>Exe</OutputType>

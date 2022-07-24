@@ -4,7 +4,6 @@
         <TargetFramework>net6.0</TargetFramework>
 
         <IsPackable>false</IsPackable>
-        <GenerateProgramFile>false</GenerateProgramFile>
         <RootNamespace>AdventOfCode20.ReportRepair.Star1</RootNamespace>
         <AssemblyName>ReportRepair.Star1.Tests</AssemblyName>
         <OutputType>Exe</OutputType>

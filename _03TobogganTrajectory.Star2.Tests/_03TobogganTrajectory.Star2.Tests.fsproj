@@ -4,7 +4,6 @@
         <TargetFramework>net6.0</TargetFramework>
 
         <IsPackable>false</IsPackable>
-        <GenerateProgramFile>false</GenerateProgramFile>
         <RootNamespace>AdventOfCode20.TobogganTrajectory.Star2</RootNamespace>
         <AssemblyName>TobogganTrajectory.Star2.Tests</AssemblyName>
         <OutputType>Exe</OutputType>
