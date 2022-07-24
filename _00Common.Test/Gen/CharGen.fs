@@ -2,4 +2,11 @@
 
 open FsCheck
 
-let genLetter = Gen.choose (int 'a', int 'z') |> Gen.map char
+let genCharBetween (min: char) (max: char) =
+    Gen.choose (int min, int max) |> Gen.map char
+
+let genLetter = genCharBetween 'a' 'z'
+
+let genDigit = genCharBetween '0' '9'
+
+let genHexDigit = Gen.oneof [ genDigit; genCharBetween 'a' 'f' ]

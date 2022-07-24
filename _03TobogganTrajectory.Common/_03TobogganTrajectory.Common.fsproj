@@ -8,17 +8,17 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\_00Common.Lib\_00Common.Lib.fsproj" />
+        <ProjectReference Include="..\_00Common.Lib\_00Common.Lib.fsproj"/>
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Include="Domain.fs" />
-        <Compile Include="Forest.fs" />
-        <Compile Include="Parse.fs" />
+        <Compile Include="Domain.fs"/>
+        <Compile Include="Forest.fs"/>
+        <Compile Include="Parse.fs"/>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Remove="FSharp.Core" />
+        <PackageReference Remove="FSharp.Core"/>
     </ItemGroup>
 
 </Project>

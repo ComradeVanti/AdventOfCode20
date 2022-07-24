@@ -11,20 +11,20 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="LibTests.fs" />
-        <Compile Include="Program.fs" />
+        <Compile Include="LibTests.fs"/>
+        <Compile Include="Program.fs"/>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Remove="FSharp.Core" />
+        <PackageReference Remove="FSharp.Core"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\_00Common.Lib\_00Common.Lib.fsproj" />
-        <ProjectReference Include="..\_00Common.Test\_00Common.Test.fsproj" />
-        <ProjectReference Include="..\_03TobogganTrajectory.Common.Tests\_03TobogganTrajectory.Common.Tests.fsproj" />
-        <ProjectReference Include="..\_03TobogganTrajectory.Common\_03TobogganTrajectory.Common.fsproj" />
-        <ProjectReference Include="..\_03TobogganTrajectory.Star1\_03TobogganTrajectory.Star1.fsproj" />
+        <ProjectReference Include="..\_00Common.Lib\_00Common.Lib.fsproj"/>
+        <ProjectReference Include="..\_00Common.Test\_00Common.Test.fsproj"/>
+        <ProjectReference Include="..\_03TobogganTrajectory.Common.Tests\_03TobogganTrajectory.Common.Tests.fsproj"/>
+        <ProjectReference Include="..\_03TobogganTrajectory.Common\_03TobogganTrajectory.Common.fsproj"/>
+        <ProjectReference Include="..\_03TobogganTrajectory.Star1\_03TobogganTrajectory.Star1.fsproj"/>
     </ItemGroup>
 
 </Project>

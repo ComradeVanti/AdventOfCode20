@@ -117,3 +117,8 @@ let rec fold f seed list =
         }
 
 let foldn f seed i = List.init i id |> fold (fun acc _ -> f acc) seed
+
+let stringFrom (charGen: Gen<char>) length =
+    charGen
+    |> Gen.listOfLength length
+    |> Gen.map System.String.Concat

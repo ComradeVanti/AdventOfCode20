@@ -41,3 +41,5 @@ let allEqual list = list |> List.distinct |> List.length <= 1
 let mapAt i f list =
     list
     |> List.mapi (fun index item -> if index = i then f item else item)
+
+let isDistinct list = list |> List.distinct = list
