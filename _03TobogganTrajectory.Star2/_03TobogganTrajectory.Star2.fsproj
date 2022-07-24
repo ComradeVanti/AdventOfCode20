@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>AdventOfCode20.TobogganTrajectory.Star2</RootNamespace>
+        <AssemblyName>TobogganTrajectory.Star2</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\_00Common.Lib\_00Common.Lib.fsproj" />
+        <ProjectReference Include="..\_03TobogganTrajectory.Common\_03TobogganTrajectory.Common.fsproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Include="Lib.fs" />
+        <Compile Include="App.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Remove="FSharp.Core" />
+    </ItemGroup>
+
+</Project>

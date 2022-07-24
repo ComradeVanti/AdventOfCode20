@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+
+        <IsPackable>false</IsPackable>
+        <GenerateProgramFile>false</GenerateProgramFile>
+        <RootNamespace>AdventOfCode20.ReportRepair.Star2</RootNamespace>
+        <AssemblyName>ReportRepair.Star2.Tests</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="LibTests.fs" />
+        <Compile Include="Program.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Remove="FSharp.Core" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\_00Common.Lib\_00Common.Lib.fsproj" />
+        <ProjectReference Include="..\_00Common.Test\_00Common.Test.fsproj" />
+        <ProjectReference Include="..\_01ReportRepair.Common.Test\_01ReportRepair.Common.Test.fsproj" />
+        <ProjectReference Include="..\_01ReportRepair.Common\_01ReportRepair.Common.fsproj" />
+        <ProjectReference Include="..\_01ReportRepair.Star2\_01ReportRepair.Star2.fsproj" />
+    </ItemGroup>
+
+</Project>

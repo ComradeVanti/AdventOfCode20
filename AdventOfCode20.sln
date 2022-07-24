@@ -1,44 +1,44 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Common.Lib", "Common.Lib\Common.Lib.fsproj", "{078ECA2B-BF4A-4556-8750-F155616E3F2A}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_00Common.Lib", "_00Common.Lib\_00Common.Lib.fsproj", "{078ECA2B-BF4A-4556-8750-F155616E3F2A}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Common.Test", "Common.Test\Common.Test.fsproj", "{D418BC8D-8CAC-444B-AB1E-57B7EC6BD96F}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_00Common.Test", "_00Common.Test\_00Common.Test.fsproj", "{D418BC8D-8CAC-444B-AB1E-57B7EC6BD96F}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ReportRepair.Common", "ReportRepair.Common\ReportRepair.Common.fsproj", "{D3334C3D-843F-4872-9684-087D88C7078B}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_01ReportRepair.Common", "_01ReportRepair.Common\_01ReportRepair.Common.fsproj", "{D3334C3D-843F-4872-9684-087D88C7078B}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ReportRepair.Star1", "ReportRepair.Star1\ReportRepair.Star1.fsproj", "{D900709B-E15B-4E85-8BDD-77760A0F3352}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_01ReportRepair.Star1", "_01ReportRepair.Star1\_01ReportRepair.Star1.fsproj", "{D900709B-E15B-4E85-8BDD-77760A0F3352}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ReportRepair.Star1.Tests", "ReportRepair.Star1.Tests\ReportRepair.Star1.Tests.fsproj", "{05F86496-55F8-47E0-A610-9379E4BB3788}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_01ReportRepair.Star1.Tests", "_01ReportRepair.Star1.Tests\_01ReportRepair.Star1.Tests.fsproj", "{05F86496-55F8-47E0-A610-9379E4BB3788}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ReportRepair.Common.Test", "ReportRepair.Common.Test\ReportRepair.Common.Test.fsproj", "{2DBC0132-3E53-4771-B79F-3940B2E642C1}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_01ReportRepair.Common.Test", "_01ReportRepair.Common.Test\_01ReportRepair.Common.Test.fsproj", "{2DBC0132-3E53-4771-B79F-3940B2E642C1}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ReportRepair.Star2", "ReportRepair.Star2\ReportRepair.Star2.fsproj", "{0827B74D-FFE2-44E1-A0AC-1C77FE65B002}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_01ReportRepair.Star2", "_01ReportRepair.Star2\_01ReportRepair.Star2.fsproj", "{0827B74D-FFE2-44E1-A0AC-1C77FE65B002}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ReportRepair.Star2.Tests", "ReportRepair.Star2.Tests\ReportRepair.Star2.Tests.fsproj", "{8E579C6D-A37E-4CA9-914D-D98ED5777839}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_01ReportRepair.Star2.Tests", "_01ReportRepair.Star2.Tests\_01ReportRepair.Star2.Tests.fsproj", "{8E579C6D-A37E-4CA9-914D-D98ED5777839}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PasswordPhilosophy.Common", "PasswordPhilosophy.Common\PasswordPhilosophy.Common.fsproj", "{B650A22A-91AF-4B24-BB19-CF1D701CD9CA}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_02PasswordPhilosophy.Common", "_02PasswordPhilosophy.Common\_02PasswordPhilosophy.Common.fsproj", "{B650A22A-91AF-4B24-BB19-CF1D701CD9CA}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PasswordPhilosophy.Common.Test", "PasswordPhilosophy.Common.Test\PasswordPhilosophy.Common.Test.fsproj", "{505C1D59-219B-4E8D-997B-14FD7CF1A659}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_02PasswordPhilosophy.Common.Test", "_02PasswordPhilosophy.Common.Test\_02PasswordPhilosophy.Common.Test.fsproj", "{505C1D59-219B-4E8D-997B-14FD7CF1A659}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PasswordPhilosophy.Star1", "PasswordPhilosophy.Star1\PasswordPhilosophy.Star1.fsproj", "{352EC9C0-964C-4E5B-AFF6-155BA86773B4}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_02PasswordPhilosophy.Star1", "_02PasswordPhilosophy.Star1\_02PasswordPhilosophy.Star1.fsproj", "{352EC9C0-964C-4E5B-AFF6-155BA86773B4}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PasswordPhilosophy.Star1.Tests", "PasswordPhilosophy.Star1.Tests\PasswordPhilosophy.Star1.Tests.fsproj", "{CEB6B8C7-B62E-44FF-9038-D9C6258B7A39}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_02PasswordPhilosophy.Star1.Tests", "_02PasswordPhilosophy.Star1.Tests\_02PasswordPhilosophy.Star1.Tests.fsproj", "{CEB6B8C7-B62E-44FF-9038-D9C6258B7A39}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PasswordPhilosophy.Star2", "PasswordPhilosophy.Star2\PasswordPhilosophy.Star2.fsproj", "{E9B536F0-91AB-43CE-ADD3-6FB28019F28A}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_02PasswordPhilosophy.Star2", "_02PasswordPhilosophy.Star2\_02PasswordPhilosophy.Star2.fsproj", "{E9B536F0-91AB-43CE-ADD3-6FB28019F28A}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PasswordPhilosophy.Star2.Test", "PasswordPhilosophy.Star2.Test\PasswordPhilosophy.Star2.Test.fsproj", "{6BA8F9DA-1E6D-4F4B-B7F8-140CE5609A60}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_02PasswordPhilosophy.Star2.Test", "_02PasswordPhilosophy.Star2.Test\_02PasswordPhilosophy.Star2.Test.fsproj", "{6BA8F9DA-1E6D-4F4B-B7F8-140CE5609A60}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TobogganTrajectory.Common", "TobogganTrajectory.Common\TobogganTrajectory.Common.fsproj", "{37B9443D-2C8D-4FC1-90AA-D9EA2A0E1677}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_03TobogganTrajectory.Common", "_03TobogganTrajectory.Common\_03TobogganTrajectory.Common.fsproj", "{37B9443D-2C8D-4FC1-90AA-D9EA2A0E1677}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TobogganTrajectory.Common.Tests", "TobogganTrajectory.Common.Tests\TobogganTrajectory.Common.Tests.fsproj", "{0F7D205F-494B-442F-BED7-4F378C6234B3}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_03TobogganTrajectory.Common.Tests", "_03TobogganTrajectory.Common.Tests\_03TobogganTrajectory.Common.Tests.fsproj", "{0F7D205F-494B-442F-BED7-4F378C6234B3}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TobogganTrajectory.Star1", "TobogganTrajectory.Star1\TobogganTrajectory.Star1.fsproj", "{266BA553-00EE-498B-8DA7-B4945549483C}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_03TobogganTrajectory.Star1", "_03TobogganTrajectory.Star1\_03TobogganTrajectory.Star1.fsproj", "{266BA553-00EE-498B-8DA7-B4945549483C}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TobogganTrajectory.Star1.Tests", "TobogganTrajectory.Star1.Tests\TobogganTrajectory.Star1.Tests.fsproj", "{D6B1CB8C-ED35-4D01-98ED-6A0EBB283417}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_03TobogganTrajectory.Star1.Tests", "_03TobogganTrajectory.Star1.Tests\_03TobogganTrajectory.Star1.Tests.fsproj", "{D6B1CB8C-ED35-4D01-98ED-6A0EBB283417}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TobogganTrajectory.Star2", "TobogganTrajectory.Star2\TobogganTrajectory.Star2.fsproj", "{8B360B16-FECC-4C9B-9F2F-824F0E2B1782}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_03TobogganTrajectory.Star2", "_03TobogganTrajectory.Star2\_03TobogganTrajectory.Star2.fsproj", "{8B360B16-FECC-4C9B-9F2F-824F0E2B1782}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TobogganTrajectory.Star2.Tests", "TobogganTrajectory.Star2.Tests\TobogganTrajectory.Star2.Tests.fsproj", "{EA763414-97C2-49DD-84B7-8E760705C059}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_03TobogganTrajectory.Star2.Tests", "_03TobogganTrajectory.Star2.Tests\_03TobogganTrajectory.Star2.Tests.fsproj", "{EA763414-97C2-49DD-84B7-8E760705C059}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
