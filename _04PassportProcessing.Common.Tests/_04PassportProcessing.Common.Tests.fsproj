@@ -20,7 +20,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\_00Common.Lib\_00Common.Lib.fsproj" />
         <ProjectReference Include="..\_00Common.Test\_00Common.Test.fsproj" />
         <ProjectReference Include="..\_04PassportProcessing.Common\_04PassportProcessing.Common.fsproj" />
     </ItemGroup>

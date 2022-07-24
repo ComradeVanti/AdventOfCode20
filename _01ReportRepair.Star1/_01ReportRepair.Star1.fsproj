@@ -9,7 +9,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\_00Common.Lib\_00Common.Lib.fsproj"/>
         <ProjectReference Include="..\_01ReportRepair.Common\_01ReportRepair.Common.fsproj"/>
     </ItemGroup>
 

@@ -13,7 +13,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\_00Common.Lib\_00Common.Lib.fsproj"/>
         <ProjectReference Include="..\_03TobogganTrajectory.Common\_03TobogganTrajectory.Common.fsproj"/>
     </ItemGroup>
 
