@@ -21,7 +21,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\_04PassportProcessing.Common.Tests\_04PassportProcessing.Common.Tests.fsproj"/>
-        <ProjectReference Include="..\_04PassportProcessing.Common\_04PassportProcessing.Star1.fsproj"/>
+        <ProjectReference Include="..\_04PassportProcessing.Star1\_04PassportProcessing.Star1.fsproj"/>
     </ItemGroup>
 
 </Project>
