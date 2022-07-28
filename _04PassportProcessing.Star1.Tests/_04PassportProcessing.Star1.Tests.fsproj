@@ -13,6 +13,7 @@
         <Compile Include="Domain.fs"/>
         <Compile Include="Gen\MockPuzzleInputGen.fs"/>
         <Compile Include="GenTests\MockPuzzleInputGenTests.fs"/>
+        <Compile Include="LibTests.fs"/>
     </ItemGroup>
 
     <ItemGroup>

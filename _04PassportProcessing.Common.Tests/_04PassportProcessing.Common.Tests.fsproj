@@ -13,6 +13,7 @@
         <EmbeddedResource Include="example-input.txt">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </EmbeddedResource>
+        <Compile Include="ExampleInput.fs"/>
         <Compile Include="Gen\PassportGen.fs"/>
         <Compile Include="GenTests\PassportGenTests.fs"/>
         <Compile Include="ParseTests.fs"/>

@@ -15,4 +15,9 @@
         <PackageReference Remove="FSharp.Core"/>
     </ItemGroup>
 
+    <ItemGroup>
+        <Compile Include="Lib.fs"/>
+        <Compile Include="App.fs"/>
+    </ItemGroup>
+
 </Project>

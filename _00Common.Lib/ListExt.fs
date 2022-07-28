@@ -53,6 +53,6 @@ let splitAtItem item list =
         | Some index ->
             let chunk, rest = sublist |> List.splitAt index
             chunk :: (split (rest |> List.skip 1))
-        | None -> []
+        | None -> [ sublist ]
 
     split list

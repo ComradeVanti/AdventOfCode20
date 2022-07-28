@@ -28,9 +28,7 @@ module Grid =
     let mapAt i f grid =
         let x, y = V2.xyOf i
 
-        rowsOf grid
-        |> List.mapAt y (List.mapAt x f)
-        |> Rows
+        rowsOf grid |> List.mapAt y (List.mapAt x f) |> Rows
 
     let updateAt i item grid = grid |> mapAt i (fun _ -> item)
 

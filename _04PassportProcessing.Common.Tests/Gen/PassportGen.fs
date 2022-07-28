@@ -6,22 +6,25 @@ open FsCheck
 
 let private genId = Gen.stringFrom genDigit 9
 
-let private genBirthYear = Gen.choose (1900, 2000)
+let private genBirthYear =
+    Gen.choose (1900, 2000) |> Gen.map string
 
-let private genIssueYear = Gen.choose (1900, 2000)
+let private genIssueYear =
+    Gen.choose (1900, 2000) |> Gen.map string
 
-let private genExpirationYear = Gen.choose (1900, 2000)
+let private genExpirationYear =
+    Gen.choose (1900, 2000) |> Gen.map string
 
 let private genCmHeight =
     gen {
         let! value = Gen.choose (150, 200)
-        return (value, Centimeter)
+        return $"%i{value}cm"
     }
 
 let private genInchHeight =
     gen {
         let! value = Gen.choose (58, 60)
-        return (value, Inch)
+        return $"%i{value}in"
     }
 
 let private genHeight = Gen.oneof [ genCmHeight; genInchHeight ]
@@ -38,7 +41,8 @@ let private genEyeColor =
                    "brn"
                    "grn" ]
 
-let private genCountryId = Gen.choose (10, 200)
+let private genCountryId =
+    Gen.choose (10, 200) |> Gen.map string
 
 let private forSure g = g |> Gen.map Some
 
