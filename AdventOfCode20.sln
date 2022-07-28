@@ -46,6 +46,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_04PassportProcessing.Commo
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_04PassportProcessing.Star1.Tests", "_04PassportProcessing.Star1.Tests\_04PassportProcessing.Star1.Tests.fsproj", "{09FE0A79-147D-44C9-A2CB-E73CDA95C2C2}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "_04PassportProcessing.Star1", "_04PassportProcessing.Star1\_04PassportProcessing.Star1.fsproj", "{A91D55E3-89E4-4E56-A924-B3B24C55066A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -144,5 +146,9 @@ Global
 		{09FE0A79-147D-44C9-A2CB-E73CDA95C2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09FE0A79-147D-44C9-A2CB-E73CDA95C2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09FE0A79-147D-44C9-A2CB-E73CDA95C2C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A91D55E3-89E4-4E56-A924-B3B24C55066A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A91D55E3-89E4-4E56-A924-B3B24C55066A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A91D55E3-89E4-4E56-A924-B3B24C55066A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A91D55E3-89E4-4E56-A924-B3B24C55066A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

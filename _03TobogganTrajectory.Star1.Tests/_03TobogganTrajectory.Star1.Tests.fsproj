@@ -10,16 +10,16 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="LibTests.fs" />
+        <Compile Include="LibTests.fs"/>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Remove="FSharp.Core" />
+        <PackageReference Remove="FSharp.Core"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\_03TobogganTrajectory.Common.Tests\_03TobogganTrajectory.Common.Tests.fsproj" />
-        <ProjectReference Include="..\_03TobogganTrajectory.Star1\_03TobogganTrajectory.Star1.fsproj" />
+        <ProjectReference Include="..\_03TobogganTrajectory.Common.Tests\_03TobogganTrajectory.Common.Tests.fsproj"/>
+        <ProjectReference Include="..\_03TobogganTrajectory.Star1\_03TobogganTrajectory.Star1.fsproj"/>
     </ItemGroup>
 
 </Project>

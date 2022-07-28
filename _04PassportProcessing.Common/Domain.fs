@@ -17,7 +17,7 @@ type Passport =
       IssueYear: Year option
       ExpirationYear: Year option
       Height: Height option
-      HairColor: HexColor option
+      HairColor: string option
       EyeColor: string option }
 
 type Batch = Passports of Passport list

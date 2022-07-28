@@ -43,3 +43,16 @@ let mapAt i f list =
     |> List.mapi (fun index item -> if index = i then f item else item)
 
 let isDistinct list = list |> List.distinct = list
+
+let tryIndexOf item list = list |> List.tryFindIndex ((=) item)
+
+let splitAtItem item list =
+
+    let rec split sublist =
+        match sublist |> tryIndexOf item with
+        | Some index ->
+            let chunk, rest = sublist |> List.splitAt index
+            chunk :: (split (rest |> List.skip 1))
+        | None -> []
+
+    split list

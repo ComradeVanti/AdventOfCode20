@@ -10,18 +10,18 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Domain.fs" />
-        <Compile Include="Gen\MockPuzzleInputGen.fs" />
-        <Compile Include="GenTests\MockPuzzleInputGenTests.fs" />
+        <Compile Include="Domain.fs"/>
+        <Compile Include="Gen\MockPuzzleInputGen.fs"/>
+        <Compile Include="GenTests\MockPuzzleInputGenTests.fs"/>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Remove="FSharp.Core" />
+        <PackageReference Remove="FSharp.Core"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\_04PassportProcessing.Common.Tests\_04PassportProcessing.Common.Tests.fsproj" />
-        <ProjectReference Include="..\_04PassportProcessing.Common\_04PassportProcessing.Common.fsproj" />
+        <ProjectReference Include="..\_04PassportProcessing.Common.Tests\_04PassportProcessing.Common.Tests.fsproj"/>
+        <ProjectReference Include="..\_04PassportProcessing.Common\_04PassportProcessing.Star1.fsproj"/>
     </ItemGroup>
 
 </Project>

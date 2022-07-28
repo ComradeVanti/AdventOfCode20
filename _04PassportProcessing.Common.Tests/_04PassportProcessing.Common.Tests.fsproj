@@ -10,17 +10,21 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Gen\PassportGen.fs" />
-        <Compile Include="GenTests\PassportGenTests.fs" />
+        <EmbeddedResource Include="example-input.txt">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </EmbeddedResource>
+        <Compile Include="Gen\PassportGen.fs"/>
+        <Compile Include="GenTests\PassportGenTests.fs"/>
+        <Compile Include="ParseTests.fs"/>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Remove="FSharp.Core" />
+        <PackageReference Remove="FSharp.Core"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\_00Common.Test\_00Common.Test.fsproj" />
-        <ProjectReference Include="..\_04PassportProcessing.Common\_04PassportProcessing.Common.fsproj" />
+        <ProjectReference Include="..\_00Common.Test\_00Common.Test.fsproj"/>
+        <ProjectReference Include="..\_04PassportProcessing.Common\_04PassportProcessing.Common.fsproj"/>
     </ItemGroup>
 
 </Project>

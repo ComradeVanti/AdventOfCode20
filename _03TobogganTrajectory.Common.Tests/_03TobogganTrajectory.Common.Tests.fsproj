@@ -10,22 +10,22 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Domainfs.fs" />
-        <Compile Include="Gen\CollisionCountsGen.fs" />
-        <Compile Include="Gen\ForestGen.fs" />
-        <Compile Include="Gen\MockPuzzleInputGen.fs" />
-        <Compile Include="GenTests\ForestGenTests.fs" />
-        <Compile Include="GenTests\MockPuzzleInputGenTests.fs" />
-        <Compile Include="ParseTests.fs" />
+        <Compile Include="Domainfs.fs"/>
+        <Compile Include="Gen\CollisionCountsGen.fs"/>
+        <Compile Include="Gen\ForestGen.fs"/>
+        <Compile Include="Gen\MockPuzzleInputGen.fs"/>
+        <Compile Include="GenTests\ForestGenTests.fs"/>
+        <Compile Include="GenTests\MockPuzzleInputGenTests.fs"/>
+        <Compile Include="ParseTests.fs"/>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Remove="FSharp.Core" />
+        <PackageReference Remove="FSharp.Core"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\_00Common.Test\_00Common.Test.fsproj" />
-        <ProjectReference Include="..\_03TobogganTrajectory.Common\_03TobogganTrajectory.Common.fsproj" />
+        <ProjectReference Include="..\_00Common.Test\_00Common.Test.fsproj"/>
+        <ProjectReference Include="..\_03TobogganTrajectory.Common\_03TobogganTrajectory.Common.fsproj"/>
     </ItemGroup>
 
 </Project>
